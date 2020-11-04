@@ -6,7 +6,112 @@ fetch("characters.json")
   .catch(err => console.log(err))
 
 function thronesInfo(result) {
-  console.log(result[1302]);
+  var cardBody = document.getElementsByClassName("card");
   var characterArray = [result[1051], result[1302], result[582], result[1426], result[1934], result[1876], result[147], result[216], result[1345], result[956]];
-  console.log(characterArray);
+
+  for (var i = 0; i < cardBody.length; i++) {
+
+    for (var j = 0; i < characterArray.length; i++) {
+      var div = document.createElement("div");
+      var img = document.createElement("img");
+      var h3 = document.createElement("h3");
+      var p = document.createElement("p");
+      var pText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      img.src = "images/1.jpg";
+      div.classList.add("card-body");
+      h3.classList.add("card-title");
+      h3.classList.add("card-font");
+
+      p.append(pText);
+      h3.append(characterArray[i].Name);
+      div.append(img);
+      div.append(h3);
+      div.append(p);
+      cardBody[i].append(div);
+
+      var choiceOne = document.getElementById("choiceOne");
+      var choiceTwo = document.getElementById("choiceTwo");
+
+      var button = document.createElement("button");
+      button.classList.add("choiceButton");
+      var buttonText = "Choose";
+    }
+  }
+}
+
+/* Functions for choosing two characters */
+fetch("characters.json")
+  .then(result2 => result2.json())
+  .then((res) => {
+    chosenFunction(res);
+    })
+  .catch(err => console.log(err))
+
+
+  function chosenFunction(result2) {
+    var state = localStorage.getItem('state');
+    //var state = 1;
+    var stateOne = document.getElementById("stateOne");
+    var stateTwo = document.getElementById("stateTwo");
+    stateOne.onclick = function() {
+      localStorage.setItem('state', 1);
+      stateTwo.classList.toggle("active");
+      stateOne.classList.toggle("active");
+    }
+    stateTwo.onclick = function() {
+      state = 2;
+      localStorage.setItem('state', 2);
+      stateOne.classList.toggle("active");
+      stateTwo.classList.toggle("active");
+    }
+    console.log(state);
+
+    /* Character Button Functions */
+      var chosen = document.querySelectorAll(".card");
+      var characterArray = [result2[1051], result2[1302], result2[582], result2[1426], result2[1934], result2[1876], result2[147], result2[216], result2[1345], result2[956]];
+      for (var i = 0; i < chosen.length; i++) {
+        chosen[i].addEventListener("click", chosenFunction);
+      }
+    if (this == chosen[0] && state == 1) {
+      choiceOne.innerHTML = "Tyrion Lannister";
+    } else if (this == chosen[1] && state == 1) {
+      console.log("hau");
+      choiceOne.innerHTML = "Daenerys Targaryen";
+    } else if (this == chosen[2] && state == 1) {
+      choiceOne.innerHTML = "Jon Snow";
+    } else if (this == chosen[3] && state == 1) {
+      choiceOne.innerHTML = "Gilly";
+    } else if (this == chosen[4] && state == 1) {
+      choiceOne.innerHTML = "Shae";
+    } else if (this == chosen[5] && state == 1) {
+      choiceOne.innerHTML = "Robb Stark";
+    } else if (this == chosen[6] && state == 1) {
+      choiceOne.innerHTML = "Arya Stark";
+    } else if (this == chosen[7] && state == 1) {
+      choiceOne.innerHTML = "Bronn";
+    } else if (this == chosen[8] && state == 1) {
+      choiceOne.innerHTML = "Drogo";
+    } else if (this == chosen[9] && state == 1) {
+      choiceOne.innerHTML = "Sansa Stark";
+    } else if (this == chosen[0] && state == 2) {
+      choiceTwo.innerHTML = "Tyrion Lannister";
+    } else if (this == chosen[1] && state == 2) {
+      choiceTwo.innerHTML = "Daenerys Targaryen";
+    } else if (this == chosen[2] && state == 2) {
+      choiceTwo.innerHTML = "Jon Snow";
+    } else if (this == chosen[3] && state == 2) {
+      choiceTwo.innerHTML = "Gilly";
+    } else if (this == chosen[4] && state == 2) {
+      choiceTwo.innerHTML = "Shae";
+    } else if (this == chosen[5] && state == 2) {
+      choiceTwo.innerHTML = "Robb Stark";
+    } else if (this == chosen[6] && state == 2) {
+      choiceTwo.innerHTML = "Arya Stark";
+    } else if (this == chosen[7] && state == 2) {
+      choiceTwo.innerHTML = "Bronn";
+    } else if (this == chosen[8] && state == 2) {
+      choiceTwo.innerHTML = "Drogo";
+    } else if (this == chosen[9] && state == 2) {
+      choiceTwo.innerHTML = "Sansa";
+    }
 }

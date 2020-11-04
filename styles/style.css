@@ -4,4 +4,56 @@ nav {
 h1 {
   color: white; }
 
+h3 {
+  color: black; }
+
+.card-font {
+  font-size: 22px; }
+
+img {
+  width: 250px; }
+
+.card {
+  width: 18rem;
+  position: relative; }
+
+.characterCard {
+  margin-top: 2%;
+  margin-bottom: 5%; }
+
+.cardChosen {
+  background: green;
+  opacity: 0.5; }
+
+.card:hover {
+  cursor: pointer;
+  background: green;
+  opacity: 0.5; }
+
+.container {
+  max-width: 1200px; }
+
+.playNow {
+  position: relative; }
+
+#playButton {
+  position: absolute;
+  right: 15%;
+  top: 450px;
+  width: 350px;
+  height: 100px;
+  border: none;
+  font-size: 36px; }
+
+#playButton:hover {
+  cursor: pointer; }
+
+.unactive {
+  background: grey;
+  color: white; }
+
+.active {
+  background: green;
+  color: white; }
+
 /*# sourceMappingURL=style.css.map */
