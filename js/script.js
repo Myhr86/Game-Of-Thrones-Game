@@ -64,9 +64,8 @@ fetch("characters.json")
       stateOne.classList.toggle("active");
       stateTwo.classList.toggle("active");
     }
-    console.log(state);
 
-    /* Character Button Functions */
+    /* Character Choice Functions */
       var chosen = document.querySelectorAll(".card");
       var characterArray = [result2[1051], result2[1302], result2[582], result2[1426], result2[1934], result2[1876], result2[147], result2[216], result2[1345], result2[956]];
       for (var i = 0; i < chosen.length; i++) {
@@ -75,7 +74,6 @@ fetch("characters.json")
     if (this == chosen[0] && state == 1) {
       choiceOne.innerHTML = "Tyrion Lannister";
     } else if (this == chosen[1] && state == 1) {
-      console.log("hau");
       choiceOne.innerHTML = "Daenerys Targaryen";
     } else if (this == chosen[2] && state == 1) {
       choiceOne.innerHTML = "Jon Snow";
@@ -113,5 +111,16 @@ fetch("characters.json")
       choiceTwo.innerHTML = "Drogo";
     } else if (this == chosen[9] && state == 2) {
       choiceTwo.innerHTML = "Sansa";
+    }
+
+    var playButton = document.getElementById("playButton");
+    playButton.addEventListener("click", startGame);
+    function startGame() {
+      var char = choiceOne.textContent;
+      var charTwo = choiceTwo.textContent;
+      var playerChoiceOne = localStorage.setItem('playerOne', char);
+      var playerChoiceTwo = localStorage.setItem('playerTwo', charTwo);
+
+
     }
 }
