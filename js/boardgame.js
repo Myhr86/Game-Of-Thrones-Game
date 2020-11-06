@@ -35,4 +35,4 @@ function throwDice() {
   diceContainer.append(dice);
 }
 
-console.log("yo");
+console.log("yolo");
