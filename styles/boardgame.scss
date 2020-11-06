@@ -1,0 +1,60 @@
+@import "partials/header";
+@import "partials/layout";
+@import "partials/media";
+
+.oneToFive {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 200px;
+}
+
+.square {
+  border: 1px solid black;
+}
+
+.firstSingle {
+  display: grid;
+  grid-template-areas: ". . . . singleSquare";
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 200px;
+}
+
+.singleSquare {
+  border: 1px solid black;
+  grid-area: singleSquare;
+}
+
+.secondSingle {
+  display: grid;
+  grid-template-areas: "singleSquare . . . .";
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 200px;
+}
+
+#diceContainer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+#diceContainer img {
+  width: 100px;
+}
+
+#diceContainer h3 {
+  padding-top: 15px;
+}
+
+#players {
+  position: absolute;
+  top: 300px;
+  left: 100px;
+}
+
+.token {
+  width: 80px;
+}
