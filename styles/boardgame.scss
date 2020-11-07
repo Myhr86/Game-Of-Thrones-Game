@@ -2,21 +2,26 @@
 @import "partials/layout";
 @import "partials/media";
 
+.board {
+  margin-left: 25%;
+}
+
 .oneToFive {
   display: grid;
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 200px;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 100px;
 }
 
 .square {
   border: 1px solid black;
+  position: relative;
 }
 
 .firstSingle {
   display: grid;
-  grid-template-areas: ". . . . singleSquare";
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 200px;
+  grid-template-areas: ". . . . . . . . singleSquare";
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 100px;
 }
 
 .singleSquare {
@@ -27,8 +32,8 @@
 .secondSingle {
   display: grid;
   grid-template-areas: "singleSquare . . . .";
-  grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 200px;
+  grid-template-columns: 10% 10% 10% 10% 10%;
+  grid-template-rows: 100px;
 }
 
 #diceContainer {
@@ -53,6 +58,10 @@
   position: absolute;
   top: 300px;
   left: 100px;
+}
+
+#currentPlayer {
+
 }
 
 .token {

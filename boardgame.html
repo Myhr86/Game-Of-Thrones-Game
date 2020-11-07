@@ -19,18 +19,23 @@
       </nav>
     </header>
     <div class="container-fluid">
-      <div class="container">
-        <h2>Select Your Characters: </h2>
+      <div class="container board">
+        <h2 id="currentPlayer"></h2>
       </div>
       <div id="diceContainer" onclick="throwDice()">
         <h3>Throw Dice</h3>
       </div>
       <div id="players">
+
         <p>Player One: <span id="playerOne"></span></p>
         <p>Computer: <span id="playerTwo"></span></p>
       </div>
-      <div class="container">
+      <div class="container board">
         <div class="oneToFive">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
@@ -38,9 +43,13 @@
           <div class="square"></div>
         </div>
         <div class="firstSingle">
-          <div class="singleSquare"></div>
+          <div class="square singleSquare"></div>
         </div>
         <div class="oneToFive">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
@@ -48,9 +57,13 @@
           <div class="square"></div>
         </div>
         <div class="secondSingle">
-          <div class="singleSquare"></div>
+          <div class="square singleSquare"></div>
         </div>
         <div class="oneToFive">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
           <div class="square"></div>
@@ -58,32 +71,11 @@
           <div class="square"></div>
         </div>
         <div class="firstSingle">
-          <div class="singleSquare"></div>
-        </div>
-        <div class="oneToFive">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="secondSingle">
-          <div class="singleSquare"></div>
-        </div>
-        <div class="oneToFive">
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-          <div class="square"></div>
-        </div>
-        <div class="firstSingle">
-          <div class="singleSquare"></div>
+          <div class="square singleSquare"></div>
         </div>
       </div>
     </div>
     </div>
   <script src="js/boardgame.js"></script>
-  script
   </body>
 </html>
