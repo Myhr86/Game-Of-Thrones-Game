@@ -1,7 +1,8 @@
 @import "partials/header";
 @import "partials/layout";
-@import "partials/media";
+@import "partials/boardgameMedia";
 
+@media screen and (min-width: 981px) {
 .board {
   margin-left: 25%;
 }
@@ -46,6 +47,10 @@
   text-align: center;
 }
 
+#diceContainer:hover {
+  cursor: pointer;
+}
+
 #diceContainer img {
   width: 100px;
 }
@@ -60,10 +65,13 @@
   left: 100px;
 }
 
-#currentPlayer {
-
+.token {
+  width: 50px;
 }
 
-.token {
-  width: 80px;
+.token2 {
+  width: 50px;
+  margin-top: 25%;
+}
+
 }

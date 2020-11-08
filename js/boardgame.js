@@ -3,8 +3,34 @@ var playerOne = localStorage.getItem('playerOne');
 var playerTwo = localStorage.getItem('playerTwo');
 var p1 = "Player One";
 var p2 = "Computer";
-var activePlayer = 0;
+var activePlayer = 1;
 
+function reset()
+{  //activePlayer=0;//reset turn
+  activePlayer++;
+  console.log(activePlayer);
+   var playerOne = document.getElementById("player1");
+   var playerTwo = document.getElementById("player2");
+   //Set initial positions
+   for (var i = 0; i < squareContent.length; i++) {
+       var activeSquare = squareContent;
+   }
+   console.log(activeSquare[random]);
+
+var link2 = document.querySelector('[data-cell-index="0"]');
+//console.log(link2);
+   if(activePlayer % 2 == 0) {
+     img.src = "/images/testing.png";
+     img.classList.add("token");
+     console.log(tokenPos);
+     tokenPos.append(img2);
+   } else {
+     img2.src = "/images/testing.png";
+     img2.classList.add("token2");
+     tokenPos2.append(img2);
+   }
+
+    };
 
 var diceContainer = document.getElementById("diceContainer");
 var dice = document.createElement("img");
@@ -22,21 +48,18 @@ var secondPlayer = document.getElementById("playerTwo");
 firstPlayer.innerHTML = playerOne;
 secondPlayer.innerHTML = playerTwo;
 
+currentPlayer.innerHTML = "Player One";
 
-if (activePlayer % 2 == 0) {
-  console.log("he");
-  currentPlayer.append(p1);
-  currentPlayer.append(p1TextNode);
-} else {
-  currentPlayer.append(p2);
-  currentPlayer.append(p2TextNode);
-}
 
 var img = document.createElement("img");
 img.src = "/images/testing.png";
 img.classList.add("token");
-console.log(square);
 square[0].append(img);
+
+var img2 = document.createElement("img");
+img2.src = "/images/testing.png";
+img2.classList.add("token2");
+square[0].append(img2);
 
 function throwDice() {
   var random = Math.floor((Math.random() * 6) + 1);
@@ -70,29 +93,41 @@ function throwDice() {
   h3.style.display = "none";
   diceContainer.append(dice);
 
-  if(activePlayer % 2 == 0) {
-    currentPlayer = firstPlayer;
+
+  if (activePlayer % 2 == 0) {
+    currentPlayer.innerHTML = "Player One: It's Your Turn";
   } else {
-    currentPlayer = secondPlayer;
+    currentPlayer.innerHTML = "Computer: It's Your Turn";
   }
+  move(random);
+}
 
-  activePlayer++;
-  console.log(activePlayer);
-
-  move();
-  function move() {
+  function move(random) {
     var token = document.querySelector(".token");
-
+    var token2 = document.querySelector(".token2");
 
     for (var i = 0; i < squareContent.length; i++) {
         var activeSquare = squareContent;
     }
 
     var tokenPos = activeSquare[random];
+    var tokenPos2 = activeSquare[random];
 
-    var currentPos = tokenPos;
-    tokenPos.append(token);
-    console.log(currentPos);
-    console.log(tokenPos);
+
+    const link = document.querySelector('[data-cell-index="random"]');
+      console.log(tokenPos.dataset.cellIndex);
+
+    var newPos = activeSquare[random];
+    var myPos = link + random;
+    var myPos2 = link + random;
+
+
+    if(activePlayer %2 == 0) {
+      tokenPos.append(token);
+    } else {
+      tokenPos2.append(token2);
+    }
+
+
+    reset();
   }
-}

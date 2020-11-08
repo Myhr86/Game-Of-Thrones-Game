@@ -56,55 +56,91 @@ img {
   background: green;
   color: white; }
 
-.board {
-  margin-left: 25%; }
+@media only screen and (max-width: 480px) {
+  .board {
+    margin-left: 0 !important; }
 
-.oneToFive {
-  display: grid;
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-template-rows: 100px; }
+  .oneToFive {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px; }
 
-.square {
-  border: 1px solid black;
-  position: relative; }
+  .square {
+    border: 1px solid black;
+    position: relative; }
 
-.firstSingle {
-  display: grid;
-  grid-template-areas: ". . . . . . . . singleSquare";
-  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-  grid-template-rows: 100px; }
+  .firstSingle {
+    display: grid;
+    grid-template-areas: ". . . . singleSquare";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px; }
 
-.singleSquare {
-  border: 1px solid black;
-  grid-area: singleSquare; }
+  .singleSquare {
+    border: 1px solid black;
+    grid-area: singleSquare; }
 
-.secondSingle {
-  display: grid;
-  grid-template-areas: "singleSquare . . . .";
-  grid-template-columns: 10% 10% 10% 10% 10%;
-  grid-template-rows: 100px; }
+  .secondSingle {
+    display: grid;
+    grid-template-areas: "singleSquare . . . .";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px; } }
+@media screen and (min-width: 981px) {
+  .board {
+    margin-left: 25%; }
 
-#diceContainer {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top: 120px;
-  left: 100px;
-  border: 1px solid black;
-  text-align: center; }
+  .oneToFive {
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 100px; }
 
-#diceContainer img {
-  width: 100px; }
+  .square {
+    border: 1px solid black;
+    position: relative; }
 
-#diceContainer h3 {
-  padding-top: 15px; }
+  .firstSingle {
+    display: grid;
+    grid-template-areas: ". . . . . . . . singleSquare";
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 100px; }
 
-#players {
-  position: absolute;
-  top: 300px;
-  left: 100px; }
+  .singleSquare {
+    border: 1px solid black;
+    grid-area: singleSquare; }
 
-.token {
-  width: 80px; }
+  .secondSingle {
+    display: grid;
+    grid-template-areas: "singleSquare . . . .";
+    grid-template-columns: 10% 10% 10% 10% 10%;
+    grid-template-rows: 100px; }
+
+  #diceContainer {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    border: 1px solid black;
+    text-align: center; }
+
+  #diceContainer:hover {
+    cursor: pointer; }
+
+  #diceContainer img {
+    width: 100px; }
+
+  #diceContainer h3 {
+    padding-top: 15px; }
+
+  #players {
+    position: absolute;
+    top: 300px;
+    left: 100px; }
+
+  .token {
+    width: 50px; }
+
+  .token2 {
+    width: 50px;
+    margin-top: 25%; } }
 
 /*# sourceMappingURL=boardgame.css.map */

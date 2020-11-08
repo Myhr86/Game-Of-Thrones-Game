@@ -1,0 +1,36 @@
+@media only screen and (max-width: 480px) {
+  .board {
+    margin-left: 0 !important;
+  }
+
+  .oneToFive {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px;
+  }
+
+  .square {
+    border: 1px solid black;
+    position: relative;
+  }
+
+  .firstSingle {
+    display: grid;
+    grid-template-areas: ". . . . singleSquare";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px;
+  }
+
+  .singleSquare {
+    border: 1px solid black;
+    grid-area: singleSquare;
+  }
+
+  .secondSingle {
+    display: grid;
+    grid-template-areas: "singleSquare . . . .";
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 100px;
+  }
+
+}
