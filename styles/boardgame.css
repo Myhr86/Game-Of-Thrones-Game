@@ -91,7 +91,35 @@ img {
   .oneToFive {
     display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 100px; }
+    grid-template-rows: 100px;
+    grid-auto-flow: dense; }
+
+  .one {
+    grid-column-end: 9; }
+
+  .two {
+    grid-column-end: 8; }
+
+  .three {
+    grid-column-end: 7; }
+
+  .four {
+    grid-column-end: 6; }
+
+  .five {
+    grid-column-end: 5; }
+
+  .six {
+    grid-column-end: 4; }
+
+  .seven {
+    grid-column-end: 3; }
+
+  .eight {
+    grid-column-end: 2; }
+
+  .nine {
+    grid-column-end: 1; }
 
   .square {
     border: 1px solid black;
