@@ -66,7 +66,7 @@ function throwDice() {
   var token2 = document.querySelector(".token2");
 
     for (var i = 0; i < squareContent.length; i++) {
-      console.log(squareContent[i]);
+      //console.log(squareContent[i]);
     }
 
   for (var i = 0; i < squareContent.length; i++) {
@@ -90,16 +90,19 @@ function throwDice() {
           } else {
             squareContent[i + 1].append(token2);
 
-              //activePlayer++;
+              activePlayer++;
           }
 
 
-        } /*else {
-          squareContent[i + 1].append(token);
-          activePlayer++;
-          var newTokPos2 = tokenPos.dataset.cell;
-          //reset(random, tokenPos2);
-        }*/
+        } else {
+          if(startPos !== squareContent[0]) {
+            nextP2(startPos, random);
+          } else {
+            squareContent[i + 1].append(token2);
+
+              //activePlayer++;
+          }
+        }
       }
   }
 }
@@ -113,24 +116,37 @@ function nextP1(startPos, random) {
     }
   }
 
-
   for (var i = 0; i < squareContent.length; i++) {
   if(squareContent[i].contains(img2) === true) {
-    console.log(squareContent[11]);
     var startPos = squareContent[i];
     startPos.append(token2);
 
     var currentIndex2 = squareContent[i + random];
   }
 }
-console.log(currentIndex2);
-console.log(startPos);
-
-
-  //console.log(random);
-  //console.log(currentIndex);
-  //console.log(tokenPos.dataset.cellIndex);
-
   currentIndex2.append(token2);
-    //activePlayer++;
+  activePlayer++;
+}
+
+
+function nextP2(startPos, random) {
+  var token2 = document.querySelector(".token");
+  for (var i = 0; i < squareContent.length; i++) {
+    var newSquare = squareContent[i + random];
+
+    if(square[i].firstChild) {
+    }
+  }
+
+
+  for (var i = 0; i < squareContent.length; i++) {
+  if(squareContent[i].contains(img) === true) {
+    var startPos = squareContent[i];
+    startPos.append(token2);
+
+    var currentIndex2 = squareContent[i + random];
+  }
+}
+  currentIndex2.append(token2);
+  activePlayer++;
 }
