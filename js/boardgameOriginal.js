@@ -3,24 +3,10 @@ var playerOne = localStorage.getItem('playerOne');
 var playerTwo = localStorage.getItem('playerTwo');
 var p1 = "Player One";
 var p2 = "Computer";
-var activePlayer = 2;
+var activePlayer = 0;
 var tokenPos;
 var tokenPos2;
 var square = document.querySelectorAll(".square");
-
-
-function reset(random, tokenPos)
-{
-    console.log(tokenPos);
-    console.log(random);
-  activePlayer++;
-   var playerOne = document.getElementById("player1");
-   var playerTwo = document.getElementById("player2");
-   tokenPos.classList.add(".theToken");
-   //newTokPos.append(theToken);
-
-
-};
 
 var diceContainer = document.getElementById("diceContainer");
 var dice = document.createElement("img");
@@ -39,14 +25,15 @@ currentPlayer.innerHTML = "Player One: It's your turn!";
 
 
 var img = document.createElement("img");
-img.src = "/images/testing.png";
+img.src = "/images/testing2.png";
 img.classList.add("token");
 square[0].append(img);
 
 var img2 = document.createElement("img");
-img2.src = "/images/testing2.png";
+img2.src = "/images/testing.png";
 img2.classList.add("token2");
 square[0].append(img2);
+
 
 function throwDice() {
   var random = Math.floor((Math.random() * 6) + 1);
@@ -55,11 +42,10 @@ function throwDice() {
   h3.style.display = "none";
   diceContainer.append(dice);
 
-
   if (activePlayer % 2 == 0) {
-    currentPlayer.innerHTML = "Player One: It's Your Turn";
-  } else {
     currentPlayer.innerHTML = "Computer: It's Your Turn";
+  } else {
+    currentPlayer.innerHTML = "Player One: It's Your Turn";
   }
 
   var token = document.querySelector(".token");
@@ -89,18 +75,16 @@ function throwDice() {
             nextP1(startPos, random);
           } else {
             squareContent[i + 1].append(token2);
-
-              //activePlayer++;
+            activePlayer++;
           }
 
 
         } else {
           if(startPos !== squareContent[0]) {
-            nextP1(startPos, random);
+            nextP2(startPos, random);
           } else {
             squareContent[i + 1].append(token2);
-
-              //activePlayer++;
+            activePlayer++;
           }
         }
       }
@@ -116,17 +100,66 @@ function nextP1(startPos, random) {
     }
   }
 
-
   for (var i = 0; i < squareContent.length; i++) {
   if(squareContent[i].contains(img2) === true) {
     var startPos = squareContent[i];
     startPos.append(token2);
 
     var currentIndex2 = squareContent[i + random];
+    var endIndex = squareContent[29 - (random - 1)];
   }
 }
-//console.log(currentIndex2);
-//console.log(startPos);
-  currentIndex2.append(token2);
-    //activePlayer++;
+
+  if(currentIndex2 == squareContent[undefined]) {
+    endIndex.append(token2);
+  } else if (currentIndex2 === squareContent[29]){
+    currentIndex2.append(token2);
+    win(activePlayer);
+  } else if (currentIndex2 !== squareContent[undefined]){
+    currentIndex2.append(token2);
+    activePlayer++;
+  }
+
+}
+
+
+function nextP2(startPos, random) {
+  var token = document.querySelector(".token");
+  for (var i = 0; i < squareContent.length; i++) {
+    var newSquare = squareContent[i + random];
+
+    if(square[i].firstChild) {
+    }
+  }
+
+
+  for (var i = 0; i < squareContent.length; i++) {
+  if(squareContent[i].contains(img) === true) {
+    var startPos = squareContent[i];
+    startPos.append(token);
+
+    var currentIndex2 = squareContent[i + random];
+    var endIndex2 = squareContent[29 - (random - 1)];
+  }
+}
+
+  if(currentIndex2 == squareContent[undefined]) {
+    endIndex2.append(token);
+  }  else if (currentIndex2 === squareContent[29]){
+    currentIndex2.append(token);
+    win(activePlayer);
+  } else if (currentIndex2 !== squareContent[undefined]){
+    currentIndex2.append(token);
+    activePlayer++;
+  }
+}
+
+function win(activePlayer) {
+  if(activePlayer %2 == 0) {
+    console.log("The winner is " + p1);
+    } else {
+      console.log("The winner is " + p2);
+      var board = document.querySelector(".background");
+    }
+
 }

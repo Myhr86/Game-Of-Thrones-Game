@@ -8,23 +8,38 @@ fetch("characters.json")
 function thronesInfo(result) {
   var cardBody = document.getElementsByClassName("card");
   var characterArray = [result[1051], result[1302], result[582], result[1426], result[1934], result[1876], result[147], result[216], result[1345], result[956]];
+  var srcArray = ["tyrion.svg", "daenerys.svg", "jon.svg", "gilly.svg", "shae.svg", "robb.svg", "arya.svg", "bronn.svg", "khal.svg", "sansa.svg"]
+  var imgClasses = ["first", "second","third","fourth", "fifth", "sixt","sevent", "eighth", "nineth", "tenth"];
+  for (var i = 0; i < imgClasses.length; i++) {
+  }
+  for (var i = 0; i < srcArray.length; i++) {
+  }
+
 
   for (var i = 0; i < cardBody.length; i++) {
 
     for (var j = 0; i < characterArray.length; i++) {
       var div = document.createElement("div");
+      var imageBox = document.createElement("div");
       var img = document.createElement("img");
+      var img2 = document.createElement("img");
       var h3 = document.createElement("h3");
       var p = document.createElement("p");
+
+      var imgSource = "images/characters/";
       var pText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-      img.src = "images/1.jpg";
+      img.src = imgSource + srcArray[i];
+      img.classList.add("characters");
+      img.classList.add(imgClasses[i]);
       div.classList.add("card-body");
       h3.classList.add("card-title");
       h3.classList.add("card-font");
+      imageBox.classList.add("imageBox");
 
       p.append(pText);
       h3.append(characterArray[i].Name);
-      div.append(img);
+      imageBox.append(img);
+      div.append(imageBox);
       div.append(h3);
       div.append(p);
       cardBody[i].append(div);
@@ -50,9 +65,9 @@ fetch("characters.json")
 
   function chosenFunction(result2) {
     var state = localStorage.getItem('state');
-    //var state = 1;
     var stateOne = document.getElementById("stateOne");
     var stateTwo = document.getElementById("stateTwo");
+    localStorage.setItem('state', 1);
     stateOne.onclick = function() {
       localStorage.setItem('state', 1);
       stateTwo.classList.toggle("active");
@@ -110,7 +125,7 @@ fetch("characters.json")
     } else if (this == chosen[8] && state == 2) {
       choiceTwo.innerHTML = "Drogo";
     } else if (this == chosen[9] && state == 2) {
-      choiceTwo.innerHTML = "Sansa";
+      choiceTwo.innerHTML = "Sansa Stark";
     }
 
     var playButton = document.getElementById("playButton");
