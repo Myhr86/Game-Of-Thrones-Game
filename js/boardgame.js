@@ -183,12 +183,12 @@ function throwDice() {
 }
 
 function nextP1(startPos, random) {
+  var eventSquareFive = document.querySelector(".eventSquareFive");
+  var closeEvent = document.querySelector(".closeEvent");
+
   var token2 = document.querySelector(".token2");
   for (var i = 0; i < squareContent.length; i++) {
     var newSquare = squareContent[i + random];
-
-    if(square[i].firstChild) {
-    }
   }
 
   for (var i = 0; i < squareContent.length; i++) {
@@ -203,15 +203,21 @@ function nextP1(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex.append(token2);
+  } else if (currentIndex2 === squareContent[5]) {
+    currentIndex2.append(token2);
+    closeEvent.addEventListener("click", closeX);
+
+    eventSquareFive.style.display = "block";
+    function closeX() {
+      eventSquareFive.style.display = "none";
+      currentIndex2 = squareContent[5 - 2];
+      currentIndex2.append(token2);
+    }
+
+    activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token2);
     win(activePlayer);
-  } else if (currentIndex2 === squareContent[5]){
-    currentIndex2.append(token2);
-      function eventOne() {
-        alert("A mad dragon is blocking your path! Retreat 2 squares");
-      }
-    setTimeout(eventOne, 2000);
   } else if (currentIndex2 !== squareContent[undefined]){
     currentIndex2.append(token2);
     activePlayer++;
@@ -220,12 +226,12 @@ function nextP1(startPos, random) {
 
 
 function nextP2(startPos, random) {
+  var eventSquareFive = document.querySelector(".eventSquareFive");
+  var closeEvent = document.querySelector(".closeEvent");
+
   var token = document.querySelector(".token");
   for (var i = 0; i < squareContent.length; i++) {
     var newSquare = squareContent[i + random];
-
-    if(square[i].firstChild) {
-    }
   }
 
 
@@ -241,29 +247,26 @@ function nextP2(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex2.append(token);
+  } else if (currentIndex2 === squareContent[5]) {
+    currentIndex2.append(token);
+    closeEvent.addEventListener("click", closeX);
+
+    eventSquareFive.style.display = "block";
+    function closeX() {
+      eventSquareFive.style.display = "none";
+      currentIndex2 = squareContent[5 - 2];
+      currentIndex2.append(token);
+    }
+
+    activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token);
     win(activePlayer);
-  } else if (currentIndex2 === squareContent[5]){
-    currentIndex2.append(token);
-    setTimeout('alert("A wild dragon is blocking the path! Move back two squares!");', 1000);
   } else if (currentIndex2 !== squareContent[undefined]){
     currentIndex2.append(token);
     activePlayer++;
   }
 }
-
-/*function events(currentIndex2) {
-  var token = document.querySelector(".token");
-  var square6 = squareContent[5];
-  for (var i = 0; i < squareContent.length; i++) {
-  }
-
-  if (square6.contains(img)) {
-    alert("A wild dragon is blocking the path! Move back two squares!");
-  }
-
-}*/
 
 function win(activePlayer) {
   var board = document.querySelector(".background");
