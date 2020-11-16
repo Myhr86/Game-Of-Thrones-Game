@@ -132,6 +132,14 @@
   color: #1e1e1e;
 }
 
+.start {
+  background: #124449;
+}
+
+.finish {
+  background: #124449;
+}
+
 .token {
   width: 30px;
   z-index: 100;
@@ -144,36 +152,41 @@
 }
 
 /* EVENTS */
-.eventSquareFive {
+.eventSquare {
   background: #124449;
   width: 500px;
   height: 400px;
-  position: absolute;
   z-index: 100;
+  position: absolute;
+}
+
+.eventSquareFive {
   left: 33%;
-  top: 35%;
+  top: 30%;
   display: none;
 }
 
 .eventSquareEleven {
-  background: #124449;
-  width: 500px;
-  height: 400px;
-  position: absolute;
-  z-index: 100;
   left: 33%;
-  top: 35%;
+  top: 30%;
   display: none;
 }
 
 .eventSquareSeventeen {
-  background: #124449;
-  width: 500px;
-  height: 400px;
-  position: absolute;
-  z-index: 100;
+  left: 43%;
+  top: 30%;
+  display: none;
+}
+
+.eventSquareTwenty {
   left: 33%;
-  top: 35%;
+  top: 30%;
+  display: none;
+}
+
+.eventSquareTwentytwo {
+  left: 33%;
+  top: 30%;
   display: none;
 }
 
@@ -183,24 +196,6 @@
 }
 
 .closeEvent {
-  position: absolute;
-  right: 10px;
-  top: 2px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fdfdfd;
-}
-
-.closeEventEleven {
-  position: absolute;
-  right: 10px;
-  top: 2px;
-  font-size: 20px;
-  font-weight: bold;
-  color: #fdfdfd;
-}
-
-.closeEventSeventeen {
   position: absolute;
   right: 10px;
   top: 2px;
@@ -221,6 +216,14 @@
   cursor: pointer;
 }
 
+.closeEventTwenty {
+  cursor: pointer;
+}
+
+.closeEventTwentytwo {
+  cursor: pointer;
+}
+
 .event6 {
   background-image: url("../images/dragon.jpg");
   background-size: cover;
@@ -233,6 +236,16 @@
 
 .event17 {
   background-image: url("../images/bridge.jpg");
+  background-size: cover;
+}
+
+.event20 {
+  background-image: url("../images/trail.jpg");
+  background-size: cover;
+}
+
+.event22 {
+  background-image: url("../images/hide.jpg");
   background-size: cover;
 }
 

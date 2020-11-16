@@ -27,9 +27,13 @@ var img2 = document.createElement("img");
 var eventSquareFive = document.querySelector(".eventSquareFive");
 var eventSquareEleven = document.querySelector(".eventSquareEleven");
 var eventSquareSeventeen = document.querySelector(".eventSquareSeventeen");
+var eventSquareTwenty = document.querySelector(".eventSquareTwenty");
+var eventSquareTwentytwo = document.querySelector(".eventSquareTwentytwo");
 var closeEvent = document.querySelector(".closeEvent");
 var closeEventEleven = document.querySelector(".closeEventEleven");
 var closeEventSeventeen = document.querySelector(".closeEventSeventeen");
+var closeEventTwenty = document.querySelector(".closeEventTwenty");
+var closeEventTwentytwo = document.querySelector(".closeEventTwentytwo");
 
 /* TOKEN GIVEN BASED ON CHOICE FROM CHARACTER SELECT ON PREVIOUS PAGE */
 switch(playerTwo) {
@@ -160,8 +164,6 @@ function throwDice() {
     }
 
   for (var i = 0; i < squareContent.length; i++) {
-      var eventSquareFive = document.querySelector(".eventSquareFive");
-      var closeEvent = document.querySelector(".closeEvent");
       var activeSquare = squareContent;
       var squareCont = squareContent[i];
 
@@ -192,7 +194,7 @@ function throwDice() {
         }
       }
   }
-}, 300);
+}, 100);
 }
 
 function nextP1(startPos, random) {
@@ -243,6 +245,28 @@ function nextP1(startPos, random) {
     function closeX() {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[20]) {
+    currentIndex2.append(token2);
+    closeEventTwenty.addEventListener("click", closeX);
+
+    eventSquareTwenty.style.display = "block";
+    function closeX() {
+      eventSquareTwenty.style.display = "none";
+      currentIndex2 = squareContent[20 - 5];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[23]) {
+    currentIndex2.append(token2);
+    closeEventTwentytwo.addEventListener("click", closeX);
+
+    eventSquareTwentytwo.style.display = "block";
+    function closeX() {
+      eventSquareTwentytwo.style.display = "none";
+      currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token2);
     }
     activePlayer++;
@@ -307,6 +331,28 @@ function nextP2(startPos, random) {
     function closeX() {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[20]) {
+    currentIndex2.append(token2);
+    closeEventTwenty.addEventListener("click", closeX);
+
+    eventSquareTwenty.style.display = "block";
+    function closeX() {
+      eventSquareTwenty.style.display = "none";
+      currentIndex2 = squareContent[20 - 5];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[23]) {
+    currentIndex2.append(token2);
+    closeEventTwentytwo.addEventListener("click", closeX);
+
+    eventSquareTwentytwo.style.display = "block";
+    function closeX() {
+      eventSquareTwentytwo.style.display = "none";
+      currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token2);
     }
     activePlayer++;
