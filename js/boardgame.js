@@ -5,6 +5,7 @@ var p1 = "Player One";
 var p2 = "Computer";
 var activePlayer = 0;
 var square = document.querySelectorAll(".square");
+console.log(square);
 
 var diceContainer = document.getElementById("diceContainer");
 var dice = document.createElement("img");
@@ -23,6 +24,14 @@ currentPlayer.innerHTML = "Player One: It's your turn!";
 var img = document.createElement("img");
 var img2 = document.createElement("img");
 
+var eventSquareFive = document.querySelector(".eventSquareFive");
+var eventSquareEleven = document.querySelector(".eventSquareEleven");
+var eventSquareSeventeen = document.querySelector(".eventSquareSeventeen");
+var closeEvent = document.querySelector(".closeEvent");
+var closeEventEleven = document.querySelector(".closeEventEleven");
+var closeEventSeventeen = document.querySelector(".closeEventSeventeen");
+
+/* TOKEN GIVEN BASED ON CHOICE FROM CHARACTER SELECT ON PREVIOUS PAGE */
 switch(playerTwo) {
   case "Tyrion Lannister":
     img.src = "/images/characters/tyrion.svg";
@@ -129,12 +138,14 @@ switch(playerOne) {
 function throwDice() {
   setTimeout(function() {
 
+/* Pick a random number between 1 and 6 */
   var random = Math.floor((Math.random() * 6) + 1);
   dice.src = `/images/dice${random}.png`;
 
   h3.style.display = "none";
   diceContainer.append(dice);
 
+/* Check who is the active player and display text to let players know */
   if (activePlayer % 2 == 0) {
     currentPlayer.innerHTML = "Computer: It's Your Turn";
   } else {
@@ -149,6 +160,8 @@ function throwDice() {
     }
 
   for (var i = 0; i < squareContent.length; i++) {
+      var eventSquareFive = document.querySelector(".eventSquareFive");
+      var closeEvent = document.querySelector(".closeEvent");
       var activeSquare = squareContent;
       var squareCont = squareContent[i];
 
@@ -160,7 +173,7 @@ function throwDice() {
           var currentIndex = squareContent[i];
 
         if(activePlayer %2 == 0) {
-          //console.log(startPos);
+
           if(startPos !== squareContent[0]) {
             nextP1(startPos, random);
           } else {
@@ -183,9 +196,6 @@ function throwDice() {
 }
 
 function nextP1(startPos, random) {
-  var eventSquareFive = document.querySelector(".eventSquareFive");
-  var closeEvent = document.querySelector(".closeEvent");
-
   var token2 = document.querySelector(".token2");
   for (var i = 0; i < squareContent.length; i++) {
     var newSquare = squareContent[i + random];
@@ -203,17 +213,38 @@ function nextP1(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex.append(token2);
-  } else if (currentIndex2 === squareContent[5]) {
+  } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token2);
     closeEvent.addEventListener("click", closeX);
 
     eventSquareFive.style.display = "block";
     function closeX() {
       eventSquareFive.style.display = "none";
-      currentIndex2 = squareContent[5 - 2];
+      currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token2);
     }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[10]) {
+    currentIndex2.append(token2);
+    closeEventEleven.addEventListener("click", closeX);
 
+    eventSquareEleven.style.display = "block";
+    function closeX() {
+      eventSquareEleven.style.display = "none";
+      currentIndex2 = squareContent[10 + 3];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[16]) {
+    currentIndex2.append(token2);
+    closeEventSeventeen.addEventListener("click", closeX);
+
+    eventSquareSeventeen.style.display = "block";
+    function closeX() {
+      eventSquareSeventeen.style.display = "none";
+      currentIndex2 = squareContent[16 + 6];
+      currentIndex2.append(token2);
+    }
     activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token2);
@@ -226,9 +257,6 @@ function nextP1(startPos, random) {
 
 
 function nextP2(startPos, random) {
-  var eventSquareFive = document.querySelector(".eventSquareFive");
-  var closeEvent = document.querySelector(".closeEvent");
-
   var token = document.querySelector(".token");
   for (var i = 0; i < squareContent.length; i++) {
     var newSquare = squareContent[i + random];
@@ -247,17 +275,40 @@ function nextP2(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex2.append(token);
-  } else if (currentIndex2 === squareContent[5]) {
+  } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token);
+    console.log("p2");
     closeEvent.addEventListener("click", closeX);
 
     eventSquareFive.style.display = "block";
     function closeX() {
       eventSquareFive.style.display = "none";
-      currentIndex2 = squareContent[5 - 2];
+      currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token);
     }
 
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[10]) {
+    currentIndex2.append(token2);
+    closeEventEleven.addEventListener("click", closeX);
+
+    eventSquareEleven.style.display = "block";
+    function closeX() {
+      eventSquareEleven.style.display = "none";
+      currentIndex2 = squareContent[10 + 3];
+      currentIndex2.append(token2);
+    }
+    activePlayer++;
+  } else if (currentIndex2 === squareContent[16]) {
+    currentIndex2.append(token2);
+    closeEventSeventeen.addEventListener("click", closeX);
+
+    eventSquareSeventeen.style.display = "block";
+    function closeX() {
+      eventSquareSeventeen.style.display = "none";
+      currentIndex2 = squareContent[16 + 6];
+      currentIndex2.append(token2);
+    }
     activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token);

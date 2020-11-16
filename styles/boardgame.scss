@@ -29,17 +29,6 @@
   background-size: cover;
 }
 
-.eventSquareFive {
-  background: #124449;
-  width: 500px;
-  height: 400px;
-  position: absolute;
-  z-index: 100;
-  left: 33%;
-  top: 35%;
-  display: none;
-}
-
 .oneToFive {
   display: grid;
   grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
@@ -145,14 +134,49 @@
 
 .token {
   width: 30px;
+  z-index: 100;
 }
 
 .token2 {
   width: 30px;
+  z-index: 100;
   //margin-top: 15%;
 }
 
 /* EVENTS */
+.eventSquareFive {
+  background: #124449;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  z-index: 100;
+  left: 33%;
+  top: 35%;
+  display: none;
+}
+
+.eventSquareEleven {
+  background: #124449;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  z-index: 100;
+  left: 33%;
+  top: 35%;
+  display: none;
+}
+
+.eventSquareSeventeen {
+  background: #124449;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  z-index: 100;
+  left: 33%;
+  top: 35%;
+  display: none;
+}
+
 #dragonEvent {
   width: 100%;
   height: 81%;
@@ -167,12 +191,48 @@
   color: #fdfdfd;
 }
 
+.closeEventEleven {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+
+.closeEventSeventeen {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fdfdfd;
+}
+
 .closeEvent:hover {
+  cursor: pointer;
+}
+
+.closeEventEleven:hover {
+  cursor: pointer;
+}
+
+.closeEventSeventeen {
   cursor: pointer;
 }
 
 .event6 {
   background-image: url("../images/dragon.jpg");
+  background-size: cover;
+}
+
+.event11 {
+  background-image: url("../images/sword.jpg");
+  background-size: cover;
+}
+
+.event17 {
+  background-image: url("../images/bridge.jpg");
   background-size: cover;
 }
 

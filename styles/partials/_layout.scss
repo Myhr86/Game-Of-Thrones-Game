@@ -18,6 +18,18 @@ h3 {
   color: #fdfdfd;
 }
 
+h4 {
+  color: #fdfdfd;
+}
+
+h5 {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 0;
+  color: #fdfdfd;
+}
+
 .row {
   width: 1200px;
 }
@@ -69,7 +81,6 @@ img {
   background: green;
   opacity: 0.5;
 }
-
 
 .characters {
   width: 50px;
