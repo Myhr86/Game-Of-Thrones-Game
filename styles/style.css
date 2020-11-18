@@ -16,6 +16,16 @@ h2 {
 h3 {
   color: #fdfdfd; }
 
+h4 {
+  color: #fdfdfd; }
+
+h5 {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  z-index: 0;
+  color: #fdfdfd; }
+
 .row {
   width: 1200px; }
 
@@ -94,5 +104,42 @@ img {
 .active {
   background: green;
   color: white; }
+
+/* WIN PAGE */
+.contgratulations {
+  width: 1200px;
+  height: 800px;
+  background: #124449; }
+
+@media only screen and (max-width: 480px) {
+  .navbar-header {
+    max-width: 480px;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px; }
+
+  #logo {
+    width: 100%;
+    margin-left: 0; }
+
+  #logo2 {
+    margin: 0 auto;
+    margin-top: 5%; }
+
+  .container {
+    max-width: 480px; }
+
+  .container h2 {
+    margin: 0 auto; }
+
+  .row {
+    max-width: 480px;
+    width: 100%; }
+
+  #playButton {
+    left: 0;
+    width: 300px;
+    top: 120px;
+    margin-bottom: 20px; } }
 
 /*# sourceMappingURL=style.css.map */

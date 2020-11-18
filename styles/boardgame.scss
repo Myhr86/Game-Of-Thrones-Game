@@ -11,7 +11,7 @@
 }
 
 .square {
-  background: grey;
+  background: #8e98a0;
 }
 
 .background {
@@ -27,6 +27,13 @@
   background-image: url("/../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.oneToFive {
+  display: grid;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 80px;
+  grid-auto-flow:dense;
 }
 
 .oneToFive {
@@ -158,6 +165,15 @@
   height: 400px;
   z-index: 100;
   position: absolute;
+}
+
+.eventSquare p {
+  color: #fdfdfd;
+  margin-left: 2%;
+}
+
+.eventSquare h4 {
+  margin-left: 2%;
 }
 
 .eventSquareFive {

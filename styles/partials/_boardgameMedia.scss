@@ -9,53 +9,95 @@
     width: 100%;
   }
 
+  img {
+    width: 100px;
+  }
+
+  h5 {
+    font-size: 0.6rem;
+  }
+
   .board {
     margin-left: 0;
+    padding-left: 0;
   }
 
   .container {
     max-width: 480px;
   }
 
+  .navbar-header {
+    max-width: 480px;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px;
+  }
+
+  #logo {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #logo2 {
+    margin-left: 33%;
+    margin-top: 5%;
+  }
+
+  .container h2 {
+    margin: 0 auto;
+  }
+
+  .row {
+    max-width: 480px;
+    width: 100%;
+  }
+
   .oneToFive {
     display: grid;
-    grid-template-columns: 30% 30% 30% 30% 30%;
-    grid-template-rows: 100px;
+    grid-template-columns:12% 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-rows: 80px;
+    grid-auto-flow:dense;
+  }
+
+  .reverse {
+    display: grid;
+    grid-template-columns:12% 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-rows: 80px;
     grid-auto-flow:dense;
   }
 
   .one {
-    grid-column-end: 9;
+    grid-column-end: 10;
   }
 
   .two {
-    grid-column-end: 8;
+    grid-column-end: 9;
   }
 
   .three {
-    grid-column-end: 7;
+    grid-column-end: 8;
   }
 
   .four {
-    grid-column-end: 6;
+    grid-column-end: 7;
   }
 
   .five {
-    grid-column-end: 5;
+    grid-column-end: 6;
   }
 
   .six {
-    grid-column-end: 4;
+    grid-column-end: 5;
   }
 
   .seven {
-    grid-column-end: 3;
+    grid-column-end: 4;
   }
   .eight {
-    grid-column-end: 2;
+    grid-column-end: 3;
   }
   .nine {
-    grid-column-end: 1;
+    grid-column-end: 2;
   }
 
   .square {
@@ -67,17 +109,19 @@
     width: 100px;
     height: 100px;
     position: absolute;
-    top: 130px;
-    left: 500px;
+    top: 410px;
+    left: 30px;
     border: 1px solid black;
     text-align: center;
     background: #124449;
     color: #1e1e1e;
+
   }
 
   #players {
     color: #fdfdfd;
     margin-left: 5%;
+    margin-bottom: 40%;
   }
 
   #players p:first-child {
@@ -89,18 +133,18 @@
   }
 
   .token {
-    width: 30px;
+    width: 20px;
   }
 
   .token2 {
-    width: 30px;
+    width: 20px;
   }
 
   .firstSingle {
     display: grid;
-    grid-template-areas: ". . . . singleSquare";
-    grid-template-columns: 30% 30% 30% 30% 30%;
-    grid-template-rows: 100px;
+    grid-template-areas: ". . . . . . . . singleSquare";
+    grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-rows: 80px;
   }
 
   .singleSquare {
@@ -110,9 +154,9 @@
 
   .secondSingle {
     display: grid;
-    grid-template-areas: "singleSquare . . . .";
-    grid-template-columns: 30% 30% 30% 30% 30%;
-    grid-template-rows: 100px;
+    grid-template-areas: "singleSquare . . . . . . . .";
+    grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12%;
+    grid-template-rows: 80px;
   }
 
   .eventSquareFive {
@@ -145,5 +189,72 @@
   .event6 {
     background-image: url("../images/dragon.jpg");
     background-size: cover;
+  }
+
+  .event11 {
+    background-image: url("../images/sword.jpg");
+    background-size: cover;
+  }
+
+  .event17 {
+    background-image: url("../images/bridge.jpg");
+    background-size: cover;
+  }
+
+  .event20 {
+    background-image: url("../images/trail.jpg");
+    background-size: cover;
+  }
+
+  .event22 {
+    background-image: url("../images/hide.jpg");
+    background-size: cover;
+  }
+
+  .eventSquare {
+    background: #124449;
+    width: 90%;
+    height: 300px;
+    z-index: 100;
+    position: absolute;
+  }
+
+  .eventSquareFive {
+    left: 5%;
+    top: 60%;
+    display: none;
+  }
+
+  .eventSquareEleven {
+    left: 5%;
+    top: 60%;
+    display: none;
+  }
+
+  .eventSquareSeventeen {
+    left: 5%;
+    top: 60%;
+    display: none;
+  }
+
+  .eventSquareTwenty {
+    left: 5%;
+    top: 60%;
+    display: none;
+  }
+
+  .eventSquareTwentytwo {
+    left: 5%;
+    top: 60%;
+    display: none;
+  }
+
+  .closeEvent {
+    position: absolute;
+    right: 10px;
+    top: 2px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fdfdfd;
   }
 }

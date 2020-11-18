@@ -1,1 +1,40 @@
+@media only screen and (max-width: 480px) {
 
+  .navbar-header {
+    max-width: 480px;
+    width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px;
+  }
+
+  #logo {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #logo2 {
+    margin: 0 auto;
+    margin-top: 5%;
+  }
+
+  .container {
+    max-width: 480px;
+  }
+
+  .container h2 {
+    margin: 0 auto;
+  }
+
+  .row {
+    max-width: 480px;
+    width: 100%;
+  }
+
+  #playButton {
+    left: 0;
+    width: 300px;
+    top: 120px;
+    margin-bottom: 20px;
+  }
+
+}
