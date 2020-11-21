@@ -5,7 +5,6 @@ var p1 = "Player One";
 var p2 = "Computer";
 var activePlayer = 0;
 var square = document.querySelectorAll(".square");
-console.log(square);
 
 var diceContainer = document.getElementById("diceContainer");
 var dice = document.createElement("img");
@@ -56,6 +55,7 @@ switch(playerTwo) {
     img.src = "/images/characters/gilly.svg";
     img.classList.add("token");
     square[0].append(img);
+    break;
   case "Shae":
     img.src = "/images/characters/shae.svg";
     img.classList.add("token");
@@ -107,6 +107,7 @@ switch(playerOne) {
     img2.src = "/images/characters/gilly.svg";
     img2.classList.add("token2");
     square[0].append(img2);
+    break;
   case "Shae":
     img2.src = "/images/characters/shae.svg";
     img2.classList.add("token2");
@@ -139,7 +140,27 @@ switch(playerOne) {
 }
 
 
+function sound(src) {
+  this.sound = document.createElement("audio");
+  this.sound.src = src;
+  this.sound.setAttribute("preload", "auto");
+  this.sound.setAttribute("controls", "none");
+  this.sound.style.display = "none";
+  document.body.appendChild(this.sound);
+  this.play = function(){
+    this.sound.play();
+  }
+  this.stop = function(){
+    this.sound.pause();
+  }
+}
+
+mySound = new sound("/sounds/tick.mp3");
+/*var myMusic = new sound("/sounds/gametheme.mp3");
+myMusic.play();*/
+
 function throwDice() {
+
   setTimeout(function() {
 
 /* Pick a random number between 1 and 6 */
@@ -148,6 +169,7 @@ function throwDice() {
 
   h3.style.display = "none";
   diceContainer.append(dice);
+  mySound.play();
 
 /* Check who is the active player and display text to let players know */
   if (activePlayer % 2 == 0) {
@@ -181,6 +203,7 @@ function throwDice() {
           } else {
             squareContent[i + 1].append(token2);
             activePlayer++;
+            setTimeout(function() { throwDice() }, 1000);
           }
 
 
@@ -224,30 +247,34 @@ function nextP1(startPos, random) {
       eventSquareFive.style.display = "none";
       currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token2);
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
     }
-    activePlayer++;
+
   } else if (currentIndex2 === squareContent[10]) {
     currentIndex2.append(token2);
     closeEventEleven.addEventListener("click", closeX);
-
     eventSquareEleven.style.display = "block";
     function closeX() {
       eventSquareEleven.style.display = "none";
       currentIndex2 = squareContent[10 + 3];
       currentIndex2.append(token2);
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
     }
-    activePlayer++;
+
   } else if (currentIndex2 === squareContent[16]) {
     currentIndex2.append(token2);
     closeEventSeventeen.addEventListener("click", closeX);
-
     eventSquareSeventeen.style.display = "block";
     function closeX() {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
       currentIndex2.append(token2);
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
     }
-    activePlayer++;
+
   } else if (currentIndex2 === squareContent[20]) {
     currentIndex2.append(token2);
     closeEventTwenty.addEventListener("click", closeX);
@@ -257,8 +284,10 @@ function nextP1(startPos, random) {
       eventSquareTwenty.style.display = "none";
       currentIndex2 = squareContent[20 - 5];
       currentIndex2.append(token2);
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
     }
-    activePlayer++;
+
   } else if (currentIndex2 === squareContent[23]) {
     currentIndex2.append(token2);
     closeEventTwentytwo.addEventListener("click", closeX);
@@ -268,14 +297,18 @@ function nextP1(startPos, random) {
       eventSquareTwentytwo.style.display = "none";
       currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token2);
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
     }
-    activePlayer++;
+
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token2);
     win(activePlayer);
   } else if (currentIndex2 !== squareContent[undefined]){
     currentIndex2.append(token2);
     activePlayer++;
+    setTimeout(function() { throwDice() }, 1000);
+    //throwDice();
   }
 }
 
@@ -313,47 +346,47 @@ function nextP2(startPos, random) {
 
     activePlayer++;
   } else if (currentIndex2 === squareContent[10]) {
-    currentIndex2.append(token2);
+    currentIndex2.append(token);
     closeEventEleven.addEventListener("click", closeX);
 
     eventSquareEleven.style.display = "block";
     function closeX() {
       eventSquareEleven.style.display = "none";
       currentIndex2 = squareContent[10 + 3];
-      currentIndex2.append(token2);
+      currentIndex2.append(token);
     }
     activePlayer++;
   } else if (currentIndex2 === squareContent[16]) {
-    currentIndex2.append(token2);
+    currentIndex2.append(token);
     closeEventSeventeen.addEventListener("click", closeX);
 
     eventSquareSeventeen.style.display = "block";
     function closeX() {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
-      currentIndex2.append(token2);
+      currentIndex2.append(token);
     }
     activePlayer++;
   } else if (currentIndex2 === squareContent[20]) {
-    currentIndex2.append(token2);
+    currentIndex2.append(token);
     closeEventTwenty.addEventListener("click", closeX);
 
     eventSquareTwenty.style.display = "block";
     function closeX() {
       eventSquareTwenty.style.display = "none";
       currentIndex2 = squareContent[20 - 5];
-      currentIndex2.append(token2);
+      currentIndex2.append(token);
     }
     activePlayer++;
   } else if (currentIndex2 === squareContent[23]) {
-    currentIndex2.append(token2);
+    currentIndex2.append(token);
     closeEventTwentytwo.addEventListener("click", closeX);
 
     eventSquareTwentytwo.style.display = "block";
     function closeX() {
       eventSquareTwentytwo.style.display = "none";
       currentIndex2 = squareContent[23 - 1];
-      currentIndex2.append(token2);
+      currentIndex2.append(token);
     }
     activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
@@ -369,9 +402,11 @@ function win(activePlayer) {
   var board = document.querySelector(".background");
   if(activePlayer %2 == 0) {
     console.log("The winner is " + p1);
+    localStorage.setItem("activePlayer", 1);
     window.location.replace("win.html");
     } else {
       console.log("The winner is " + p2);
+      localStorage.setItem("activePlayer", 2);
       window.location.replace("win.html");
     }
 

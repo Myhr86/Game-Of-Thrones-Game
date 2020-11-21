@@ -15,7 +15,6 @@ function thronesInfo(result) {
   for (var i = 0; i < srcArray.length; i++) {
   }
 
-
   for (var i = 0; i < cardBody.length; i++) {
 
     for (var j = 0; i < characterArray.length; i++) {
@@ -24,10 +23,25 @@ function thronesInfo(result) {
       var img = document.createElement("img");
       var img2 = document.createElement("img");
       var h3 = document.createElement("h3");
+      var spanTitle = document.createElement("span");
+      var spanGender = document.createElement("span");
       var p = document.createElement("p");
+      var genderP = document.createElement("p");
+      var hr = document.createElement("hr");
 
+      var spanTitleText = "Title: ";
       var imgSource = "images/characters/";
-      var pText = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+      var pTitleText = characterArray[i].Titles[0];
+      var male = "Male";
+      var female = "Female";
+
+      if (characterArray[i].IsFemale === false) {
+        genderP.append(male);
+      } else {
+        genderP.append(female);
+      }
+      genderP.style.fontWeight = "bold";
+      spanTitle.style.fontWeight = "bold";
       img.src = imgSource + srcArray[i];
       img.classList.add("characters");
       img.classList.add(imgClasses[i]);
@@ -36,11 +50,16 @@ function thronesInfo(result) {
       h3.classList.add("card-font");
       imageBox.classList.add("imageBox");
 
-      p.append(pText);
+      spanTitle.append(spanTitleText);
+      p.append(spanTitle);
+      p.append(pTitleText);
+
       h3.append(characterArray[i].Name);
       imageBox.append(img);
       div.append(imageBox);
       div.append(h3);
+      div.append(hr);
+      div.append(genderP);
       div.append(p);
       cardBody[i].append(div);
 
