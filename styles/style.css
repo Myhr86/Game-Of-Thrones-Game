@@ -7,14 +7,15 @@ html {
 body {
   background: #1e1e1e; }
 
+h1, h2, h3, h4, h5 {
+  font-family: 'Playfair Display', serif; }
+
 h1 {
   color: white; }
 
 h2 {
-  color: #fdfdfd; }
-
-h3 {
-  color: #fdfdfd; }
+  color: #fdfdfd;
+  font-family: 'Playfair Display', serif; }
 
 h4 {
   color: #fdfdfd; }
@@ -25,6 +26,12 @@ h5 {
   left: 15%;
   z-index: 0;
   color: #fdfdfd; }
+
+p {
+  font-family: 'Raleway', sans-serif; }
+
+button {
+  font-family: 'Raleway', sans-serif; }
 
 .row {
   width: 1200px; }
@@ -44,13 +51,14 @@ h5 {
 
 .card-font {
   font-size: 22px;
-  color: #1e1e1e;
-  text-align: center; }
+  text-align: center;
+  font-family: 'Playfair Display', serif; }
 
 img {
   width: 250px; }
 
 .card {
+  color: #1e1e1e;
   width: 18rem;
   position: relative;
   height: 300px; }
@@ -72,8 +80,10 @@ img {
 
 .card:hover {
   cursor: pointer;
-  background: green;
-  opacity: 0.5; }
+  background: #124449;
+  opacity: 0.7;
+  color: #fdfdfd;
+  transition: 0.3s; }
 
 .characters {
   width: 50px;
@@ -106,15 +116,24 @@ img {
   font-size: 36px; }
 
 #playButton:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  background: #124449;
+  color: #fdfdfd; }
+
+button#stateOne {
+  border: none; }
+
+button#stateTwo {
+  border: none; }
 
 .unactive {
   background: grey;
   color: white; }
 
 .active {
-  background: green;
-  color: white; }
+  background: #124449;
+  color: white;
+  border: none; }
 
 /* WIN PAGE */
 .contgratulations {

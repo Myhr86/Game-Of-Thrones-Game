@@ -1,8 +1,6 @@
 var state = localStorage.getItem('state');
 var playerOne = localStorage.getItem('playerOne');
 var playerTwo = localStorage.getItem('playerTwo');
-var p1 = "Player One";
-var p2 = "Computer";
 var activePlayer = 0;
 var square = document.querySelectorAll(".square");
 
@@ -160,7 +158,6 @@ mySound = new sound("/sounds/tick.mp3");
 myMusic.play();*/
 
 function throwDice() {
-
   setTimeout(function() {
 
 /* Pick a random number between 1 and 6 */
@@ -174,8 +171,16 @@ function throwDice() {
 /* Check who is the active player and display text to let players know */
   if (activePlayer % 2 == 0) {
     currentPlayer.innerHTML = "Computer: It's Your Turn";
+    currentPlayer.style.color = "#8e98a0";
+    secondPlayer.style.color = "#124449";
+    secondPlayer.style.fontWeight = "bold";
+    firstPlayer.style.fontWeight = "400";
   } else {
     currentPlayer.innerHTML = "Player One: It's Your Turn";
+    currentPlayer.style.color = "#fdfdfd";
+    firstPlayer.style.color = "#124449";
+    firstPlayer.style.fontWeight = "bold";
+    secondPlayer.style.fontWeight = "400";
   }
 
   var token = document.querySelector(".token");
@@ -232,12 +237,28 @@ function nextP1(startPos, random) {
     startPos.append(token2);
 
     var currentIndex2 = squareContent[i + random];
-    var endIndex = squareContent[29 - (random - 1)];
+    //var endIndex = squareContent[29 - (random - 1)];
+    if (startPos === squareContent[28]) {
+      var endIndex = squareContent[29 - (random - 1)];
+    }
+    if (startPos === squareContent[27]) {
+      var endIndex = squareContent[29 - (random - 2)];
+    }
+    if (startPos === squareContent[26]) {
+      var endIndex = squareContent[29 - (random - 3)];
+    }
+    if (startPos === squareContent[25]) {
+      var endIndex = squareContent[29 - (random - 4)];
+    }
+    if (startPos === squareContent[24]) {
+      var endIndex = squareContent[29 - (random - 5)];
+    }
   }
 }
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex.append(token2);
+    activePlayer++;
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token2);
     closeEvent.addEventListener("click", closeX);
@@ -326,16 +347,30 @@ function nextP2(startPos, random) {
     startPos.append(token);
 
     var currentIndex2 = squareContent[i + random];
-    var endIndex2 = squareContent[29 - (random - 1)];
+    //var endIndex2 = squareContent[29 - (random - 1)];
+    if (startPos === squareContent[28]) {
+      var endIndex2 = squareContent[29 - (random - 1)];
+    }
+    if (startPos === squareContent[27]) {
+      var endIndex2 = squareContent[29 - (random - 2)];
+    }
+    if (startPos === squareContent[26]) {
+      var endIndex2 = squareContent[29 - (random - 3)];
+    }
+    if (startPos === squareContent[25]) {
+      var endIndex2 = squareContent[29 - (random - 4)];
+    }
+    if (startPos === squareContent[24]) {
+      var endIndex2 = squareContent[29 - (random - 5)];
+    }
   }
 }
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex2.append(token);
+    activePlayer++;
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token);
-    console.log("p2");
-    closeEvent.addEventListener("click", closeX);
 
     eventSquareFive.style.display = "block";
     function closeX() {
@@ -343,11 +378,11 @@ function nextP2(startPos, random) {
       currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token);
     }
+    setTimeout(closeX, 2000);
 
     activePlayer++;
   } else if (currentIndex2 === squareContent[10]) {
     currentIndex2.append(token);
-    closeEventEleven.addEventListener("click", closeX);
 
     eventSquareEleven.style.display = "block";
     function closeX() {
@@ -355,10 +390,10 @@ function nextP2(startPos, random) {
       currentIndex2 = squareContent[10 + 3];
       currentIndex2.append(token);
     }
+    setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[16]) {
     currentIndex2.append(token);
-    closeEventSeventeen.addEventListener("click", closeX);
 
     eventSquareSeventeen.style.display = "block";
     function closeX() {
@@ -366,10 +401,10 @@ function nextP2(startPos, random) {
       currentIndex2 = squareContent[16 + 6];
       currentIndex2.append(token);
     }
+    setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[20]) {
     currentIndex2.append(token);
-    closeEventTwenty.addEventListener("click", closeX);
 
     eventSquareTwenty.style.display = "block";
     function closeX() {
@@ -377,10 +412,10 @@ function nextP2(startPos, random) {
       currentIndex2 = squareContent[20 - 5];
       currentIndex2.append(token);
     }
+    setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[23]) {
     currentIndex2.append(token);
-    closeEventTwentytwo.addEventListener("click", closeX);
 
     eventSquareTwentytwo.style.display = "block";
     function closeX() {
@@ -388,6 +423,7 @@ function nextP2(startPos, random) {
       currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token);
     }
+    setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token);
@@ -401,11 +437,9 @@ function nextP2(startPos, random) {
 function win(activePlayer) {
   var board = document.querySelector(".background");
   if(activePlayer %2 == 0) {
-    console.log("The winner is " + p1);
     localStorage.setItem("activePlayer", 1);
     window.location.replace("win.html");
     } else {
-      console.log("The winner is " + p2);
       localStorage.setItem("activePlayer", 2);
       window.location.replace("win.html");
     }

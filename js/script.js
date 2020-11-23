@@ -89,14 +89,18 @@ fetch("characters.json")
     localStorage.setItem('state', 1);
     stateOne.onclick = function() {
       localStorage.setItem('state', 1);
-      stateTwo.classList.toggle("active");
-      stateOne.classList.toggle("active");
+      stateTwo.classList.remove("active");
+      stateOne.classList.add("active");
+      /*stateTwo.classList.toggle("active");
+      stateOne.classList.toggle("active");*/
     }
     stateTwo.onclick = function() {
       state = 2;
       localStorage.setItem('state', 2);
-      stateOne.classList.toggle("active");
-      stateTwo.classList.toggle("active");
+      stateOne.classList.remove("active");
+      stateTwo.classList.add("active");
+      /*stateOne.classList.toggle("active");
+      stateTwo.classList.toggle("active");*/
     }
 
     /* Character Choice Functions */

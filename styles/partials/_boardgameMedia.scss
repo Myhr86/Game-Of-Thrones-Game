@@ -1,11 +1,11 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 768px) {
   html {
-    max-width: 480px;
+    max-width: 768px;
     width: 100%;
   }
 
   body {
-    max-width: 480px;
+    max-width: 768px;
     width: 100%;
   }
 
@@ -23,11 +23,11 @@
   }
 
   .container {
-    max-width: 480px;
+    max-width: 768px;
   }
 
   .navbar-header {
-    max-width: 480px;
+    max-width: 768px;
     width: 100%;
     grid-template-columns: 100%;
     grid-template-rows: 100px 100px;
@@ -39,8 +39,8 @@
   }
 
   #logo2 {
-    margin-left: 33%;
-    margin-top: 5%;
+    margin-left: 42%;
+    margin-top: 3%;
   }
 
   .container h2 {
@@ -48,21 +48,21 @@
   }
 
   .row {
-    max-width: 480px;
+    max-width: 768px;
     width: 100%;
   }
 
   .oneToFive {
     display: grid;
-    grid-template-columns:12% 12% 12% 12% 12% 12% 12% 12% 12%;
-    grid-template-rows: 80px;
+    grid-template-columns:11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-template-rows: 90px;
     grid-auto-flow:dense;
   }
 
   .reverse {
     display: grid;
-    grid-template-columns:12% 12% 12% 12% 12% 12% 12% 12% 12%;
-    grid-template-rows: 80px;
+    grid-template-columns:11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-template-rows: 90px;
     grid-auto-flow:dense;
   }
 
@@ -143,8 +143,8 @@
   .firstSingle {
     display: grid;
     grid-template-areas: ". . . . . . . . singleSquare";
-    grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12%;
-    grid-template-rows: 80px;
+    grid-template-columns: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-template-rows: 90px;
   }
 
   .singleSquare {
@@ -155,8 +155,8 @@
   .secondSingle {
     display: grid;
     grid-template-areas: "singleSquare . . . . . . . .";
-    grid-template-columns: 12% 12% 12% 12% 12% 12% 12% 12% 12%;
-    grid-template-rows: 80px;
+    grid-template-columns: 11% 11% 11% 11% 11% 11% 11% 11% 11%;
+    grid-template-rows: 90px;
   }
 
   .eventSquareFive {
@@ -286,4 +286,9 @@
     padding-bottom: 20px;
     background: #1e1e1e;
   }
+}
+
+@media only screen and (max-width: 480px) {
+
+
 }
