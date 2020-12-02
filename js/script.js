@@ -151,14 +151,36 @@ fetch("characters.json")
       choiceTwo.innerHTML = "Sansa Stark";
     }
 
+    var playNow = document.querySelector(".playNow");
     var playButton = document.getElementById("playButton");
-    playButton.addEventListener("click", startGame);
-    function startGame() {
-      var char = choiceOne.textContent;
-      var charTwo = choiceTwo.textContent;
-      var playerChoiceOne = localStorage.setItem('playerOne', char);
-      var playerChoiceTwo = localStorage.setItem('playerTwo', charTwo);
+    var playLink = document.getElementById("playLink");
+    var a = document.createElement("a");
+    var alert = document.querySelector(".alert");
+    var alertX = document.getElementById("alertX");
 
+    //playLink.href = "";
+    if(choiceOne.innerHTML !== "" && choiceTwo.innerHTML !== "") {
+      a.href = "boardgame.html";
+      a.append(playButton);
+      playNow.append(a);
+      playButton.addEventListener("click", startGame);
+      function startGame() {
+        var char = choiceOne.textContent;
+        var charTwo = choiceTwo.textContent;
+        var playerChoiceOne = localStorage.setItem('playerOne', char);
+        var playerChoiceTwo = localStorage.setItem('playerTwo', charTwo);
+      }
+    } else if (choiceOne.innerHTML === "" || choiceTwo.innerHTML === ""){
+      playButton.addEventListener("click", function() {
+        if (choiceOne.innerHTML === "" || choiceTwo.innerHTML === "") {
+          alert.style.display = "block";
+        }
 
+        alertX.addEventListener("click", function() {
+          alert.style.display ="none";
+        })
+        //alert("Please choose two players");
+      });
     }
+
 }

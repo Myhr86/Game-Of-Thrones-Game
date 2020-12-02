@@ -21,6 +21,10 @@
         </div>
       </nav>
     </header>
+    <div class="alert">
+      <span id="alertX">X</span>
+      <h4>Please Choose Two Players!</h4>
+    </div>
     <div class="container-fluid">
       <div class="container">
         <h2>Select Your Characters: </h2>
@@ -28,7 +32,14 @@
         <button id="stateTwo" type="button" name="button">Computer</button>
       </div>
 
+
+
       <div class="container">
+        <div class="playNow">
+          <p>Player One: <span id="choiceOne"></span></p>
+          <p>Computer: <span id="choiceTwo"></span></p>
+          <button id="playButton">PLAY NOW</button>
+        </div>
         <div class="row">
             <div class="col-sm-3 characterCard">
               <div class="card">
@@ -85,14 +96,9 @@
               </div>
             </div>
             <div class="col-sm-6 characterCard">
-              <div class="playNow">
-                <p>Player One: <span id="choiceOne"></span></p>
-                <p>Computer: <span id="choiceTwo"></span></p>
-                <a href="boardgame.html"><button id="playButton">PLAY NOW</button></a>
-              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  <script src="js/script.js"></script>
-  </body>
+        <script src="js/script.js"></script>
+      </body>
 </html>

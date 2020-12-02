@@ -47,6 +47,7 @@ switch(playerTwo) {
   case "Jon Snow":
     img.src = "/images/characters/jon.svg";
     img.classList.add("token");
+    img.classList.add("jon");
     square[0].append(img);
     break;
   case "Gilly":
@@ -62,11 +63,13 @@ switch(playerTwo) {
   case "Robb Stark":
     img.src = "/images/characters/robb.svg";
     img.classList.add("token");
+    img.classList.add("robb");
     square[0].append(img);
     break;
   case "Arya Stark":
     img.src = "/images/characters/arya.svg";
     img.classList.add("token");
+    img.classList.add("arya");
     square[0].append(img);
     break;
   case "Bronn":
@@ -99,6 +102,7 @@ switch(playerOne) {
   case "Jon Snow":
     img2.src = "/images/characters/jon.svg";
     img2.classList.add("token2");
+    img2.classList.add("jon");
     square[0].append(img2);
     break;
   case "Gilly":
@@ -114,11 +118,13 @@ switch(playerOne) {
   case "Robb Stark":
     img2.src = "/images/characters/robb.svg";
     img2.classList.add("token2");
+    img2.classList.add("robb");
     square[0].append(img2);
     break;
   case "Arya Stark":
     img2.src = "/images/characters/arya.svg";
     img2.classList.add("token2");
+    img2.classList.add("arya");
     square[0].append(img2);
     break;
   case "Bronn":
@@ -175,9 +181,10 @@ function throwDice() {
     secondPlayer.style.color = "#124449";
     secondPlayer.style.fontWeight = "bold";
     firstPlayer.style.fontWeight = "400";
+
   } else {
     currentPlayer.innerHTML = "Player One: It's Your Turn";
-    currentPlayer.style.color = "#fdfdfd";
+    currentPlayer.style.color = "#f4d501";
     firstPlayer.style.color = "#124449";
     firstPlayer.style.fontWeight = "bold";
     secondPlayer.style.fontWeight = "400";
@@ -259,6 +266,7 @@ function nextP1(startPos, random) {
   if(currentIndex2 == squareContent[undefined]) {
     endIndex.append(token2);
     activePlayer++;
+    setTimeout(function() { throwDice() }, 1000);
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token2);
     closeEvent.addEventListener("click", closeX);

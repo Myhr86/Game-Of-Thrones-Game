@@ -142,7 +142,7 @@
 #currentPlayer {
   margin-bottom: 0;
   padding-bottom: 0;
-  color: #fdfdfd;
+  color: #f4d501;
 }
 
 .start {
@@ -155,6 +155,7 @@
 
 .token {
   width: 30px;
+  height: 51px;
   z-index: 100;
 }
 
@@ -164,6 +165,19 @@
   z-index: 100;
   //margin-top: 15%;
 }
+
+.arya {
+  height: 43px;
+}
+
+.robb {
+  width: 50px;
+}
+
+.jon {
+  width: 50px;
+}
+
 
 /* EVENTS */
 .eventSquare {

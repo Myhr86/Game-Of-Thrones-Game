@@ -23,10 +23,13 @@ function writeText() {
     setTimeout(writeText, speed);
   }
 }
-console.log(animatedPokal.width);
+
 pokalMove();
+
 function pokalMove() {
   var pokal = document.getElementById("animatedPokal");
+  var container = document.querySelector(".contgratulations");
+  console.log(container);
   var pos = 0;
   //var id = setInterval(frame, 10);
   if (animatedPokal.width >= 151) {
@@ -34,14 +37,16 @@ function pokalMove() {
   } else if (animatedPokal.width <= 150) {
     var id = setInterval(frameSmall, 10);
   }
+
   function frame() {
-    if (pos == 300) {
+    if (pos == 350) {
       clearInterval(id);
     } else {
       pos++;
       pokal.style.left = pos + 'px';
     }
   }
+
   function frameSmall() {
     if (pos == 100) {
       clearInterval(id);
@@ -51,3 +56,18 @@ function pokalMove() {
     }
   }
 }
+
+function restartButton() {
+  var a = document.createElement("a");
+  a.href = "index.html";
+  var button = document.createElement("button");
+  var buttonText = "Restart";
+  button.classList.add("restartButton");
+  button.append(buttonText);
+  a.append(button);
+  var pokalContainer = document.querySelector(".contgratulations");
+
+  pokalContainer.append(a);
+}
+
+setTimeout(function() { restartButton() }, 4000);
