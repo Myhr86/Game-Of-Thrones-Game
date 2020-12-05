@@ -109,10 +109,12 @@ fetch("characters.json")
       for (var i = 0; i < chosen.length; i++) {
         chosen[i].addEventListener("click", chosenFunction);
       }
+
     if (this == chosen[0] && state == 1) {
       choiceOne.innerHTML = "Tyrion Lannister";
     } else if (this == chosen[1] && state == 1) {
       choiceOne.innerHTML = "Daenerys Targaryen";
+      console.log(document.hasFocus());
     } else if (this == chosen[2] && state == 1) {
       choiceOne.innerHTML = "Jon Snow";
     } else if (this == chosen[3] && state == 1) {

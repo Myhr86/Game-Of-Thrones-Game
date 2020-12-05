@@ -26,6 +26,15 @@
     max-width: 768px;
   }
 
+  .background {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-image: url("/../images/background1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 4px solid grey;
+  }
+
   .navbar-header {
     max-width: 768px;
     width: 100%;
@@ -103,6 +112,7 @@
   .square {
     border: 1px solid black;
     position: relative;
+    background: grey;
   }
 
   #diceContainer {
@@ -121,7 +131,7 @@
   #players {
     color: #fdfdfd;
     margin-left: 5%;
-    margin-bottom: 40%;
+    margin-bottom: 10%;
   }
 
   #players p:first-child {

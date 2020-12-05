@@ -1,5 +1,9 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1200px) {
 
+}
+
+
+@media only screen and (max-width: 480px) {
   .navbar-header {
     max-width: 480px;
     width: 100%;
@@ -30,11 +34,21 @@
     width: 100%;
   }
 
+  .playNow {
+    margin-top: 10px;
+    margin-bottom: 190px;
+  }
+
   #playButton {
     left: 0;
     width: 300px;
-    top: 120px;
-    margin-bottom: 20px;
+    top: 90px;
+    margin-bottom: 10px;
+  }
+
+  .alert {
+    width: 320px;
+    left: 5%;
   }
 
 }

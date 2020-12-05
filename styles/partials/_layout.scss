@@ -77,11 +77,6 @@ img {
   height: 300px;
 }
 
-.cardChosen {
-  background: green;
-  opacity: 0.5;
-}
-
 .card-title {
   margin-bottom: 5%;
 }
@@ -176,12 +171,15 @@ div.alert h4 {
   height: 100px;
   border: none;
   font-size: 36px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background: #124449;
+  color: #fdfdfd;
 }
 
 #playButton:hover {
   cursor: pointer;
-  background: #124449;
-  color: #fdfdfd;
+  background: #113338;
 }
 
 button#stateOne {
@@ -226,7 +224,7 @@ button#stateTwo {
 
 .winH1 {
   text-align: center;
-  color: #f4d501;
+  color: "#f4d501";
 }
 
 #border {
@@ -243,10 +241,14 @@ button#stateTwo {
   height: 60px;
   border: none;
   font-size: 36px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background: #fdfdfd;
+  color: #1e1e1e;
 }
 
 .restartButton:hover {
   cursor: pointer;
-  background: #124449;
+  background: #1e1e1e;
   color: #fdfdfd;
 }
