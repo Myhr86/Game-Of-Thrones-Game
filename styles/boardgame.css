@@ -49,6 +49,12 @@ button {
 #logo2 {
   width: 100px; }
 
+#choiceOne {
+  font-weight: bold; }
+
+#choiceTwo {
+  font-weight: bold; }
+
 .card-font {
   font-size: 22px;
   text-align: center;
@@ -175,7 +181,7 @@ button#stateTwo {
 /* WIN PAGE */
 .contgratulations {
   width: 100%;
-  height: 600px;
+  height: 500px;
   background: #124449;
   position: relative; }
 
