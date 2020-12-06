@@ -75,10 +75,15 @@ img {
   opacity: 0.7;
   color: #fdfdfd; }
 
+.cardChosen2 {
+  background: #112C57;
+  opacity: 0.7;
+  color: #fdfdfd; }
+
 .card:hover {
   cursor: pointer;
-  background: #124449;
-  opacity: 0.7;
+  background: #115736;
+  opacity: 1;
   color: #fdfdfd;
   transition: 0.3s; }
 
@@ -151,19 +156,21 @@ div.alert h4 {
   background: #113338; }
 
 button#stateOne {
-  border: none; }
+  border: none;
+  background: #124449;
+  color: white; }
 
 button#stateTwo {
-  border: none; }
+  border: none;
+  background: #112C57;
+  color: white; }
 
 .unactive {
   background: grey;
   color: white; }
 
 .active {
-  background: #124449;
-  color: white;
-  border: none; }
+  font-weight: bold; }
 
 /* WIN PAGE */
 .contgratulations {
@@ -553,7 +560,19 @@ button#stateTwo {
     background: #113338;
     color: #fdfdfd; }
 
-  #diceContainer img {
+  #diceDisplay {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 300px;
+    left: 200px;
+    border: none;
+    text-align: center;
+    font-size: 36px;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6); }
+
+  #diceDisplay img {
     width: 100px; }
 
   #diceContainer h3 {

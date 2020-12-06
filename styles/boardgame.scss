@@ -122,7 +122,20 @@
   color: #fdfdfd;
 }
 
-#diceContainer img {
+#diceDisplay {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 300px;
+  left: 200px;
+  border: none;
+  text-align: center;
+  font-size: 36px;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+}
+
+#diceDisplay img {
   width: 100px;
 }
 

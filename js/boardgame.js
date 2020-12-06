@@ -5,6 +5,7 @@ var activePlayer = 0;
 var square = document.querySelectorAll(".square");
 
 var diceContainer = document.getElementById("diceContainer");
+var diceDisplay = document.getElementById("diceDisplay");
 var dice = document.createElement("img");
 var h3 = document.querySelector("H3");
 var squareContent = document.getElementsByClassName("square");
@@ -170,8 +171,7 @@ function throwDice() {
   var random = Math.floor((Math.random() * 6) + 1);
   dice.src = `/images/dice${random}.png`;
 
-  h3.style.display = "none";
-  diceContainer.append(dice);
+  diceDisplay.append(dice);
   mySound.play();
 
 /* Check who is the active player and display text to let players know */
@@ -181,6 +181,7 @@ function throwDice() {
     secondPlayer.style.color = "#124449";
     secondPlayer.style.fontWeight = "bold";
     firstPlayer.style.fontWeight = "400";
+    diceContainer.style.display = "none";
 
   } else {
     currentPlayer.innerHTML = "Player One: It's Your Turn";
@@ -188,6 +189,7 @@ function throwDice() {
     firstPlayer.style.color = "#124449";
     firstPlayer.style.fontWeight = "bold";
     secondPlayer.style.fontWeight = "400";
+    diceContainer.style.display = "block";
   }
 
   var token = document.querySelector(".token");

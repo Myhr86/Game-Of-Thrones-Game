@@ -28,7 +28,9 @@ function thronesInfo(result) {
       var p = document.createElement("p");
       var genderP = document.createElement("p");
       var hr = document.createElement("hr");
+      var a = document.createElement("a");
 
+      a.href = "#news";
       var spanTitleText = "Title: ";
       var imgSource = "images/characters/";
       var pTitleText = characterArray[i].Titles[0];
@@ -86,7 +88,7 @@ fetch("characters.json")
     var state = localStorage.getItem('state');
     var stateOne = document.getElementById("stateOne");
     var stateTwo = document.getElementById("stateTwo");
-    localStorage.setItem('state', 1);
+    //localStorage.setItem('state', 1);
     stateOne.onclick = function() {
       localStorage.setItem('state', 1);
       stateTwo.classList.remove("active");
@@ -108,49 +110,74 @@ fetch("characters.json")
       var characterArray = [result2[1051], result2[1302], result2[582], result2[1426], result2[1934], result2[1876], result2[147], result2[216], result2[1345], result2[956]];
       for (var i = 0; i < chosen.length; i++) {
         chosen[i].addEventListener("click", chosenFunction);
+        if (state == 1) {
+          chosen[i].classList.remove("cardChosen");
+        } else {
+          chosen[i].classList.remove("cardChosen2");
+        }
+
       }
 
     if (this == chosen[0] && state == 1) {
       choiceOne.innerHTML = "Tyrion Lannister";
+      chosen[0].classList.add("cardChosen");
     } else if (this == chosen[1] && state == 1) {
       choiceOne.innerHTML = "Daenerys Targaryen";
-      console.log(document.hasFocus());
+      chosen[1].classList.add("cardChosen");
     } else if (this == chosen[2] && state == 1) {
       choiceOne.innerHTML = "Jon Snow";
+      chosen[2].classList.add("cardChosen");
     } else if (this == chosen[3] && state == 1) {
       choiceOne.innerHTML = "Gilly";
+      chosen[3].classList.add("cardChosen");
     } else if (this == chosen[4] && state == 1) {
       choiceOne.innerHTML = "Shae";
+      chosen[4].classList.add("cardChosen");
     } else if (this == chosen[5] && state == 1) {
       choiceOne.innerHTML = "Robb Stark";
+      chosen[5].classList.add("cardChosen");
     } else if (this == chosen[6] && state == 1) {
       choiceOne.innerHTML = "Arya Stark";
+      chosen[6].classList.add("cardChosen");
     } else if (this == chosen[7] && state == 1) {
       choiceOne.innerHTML = "Bronn";
+      chosen[7].classList.add("cardChosen");
     } else if (this == chosen[8] && state == 1) {
       choiceOne.innerHTML = "Drogo";
+      chosen[8].classList.add("cardChosen");
     } else if (this == chosen[9] && state == 1) {
       choiceOne.innerHTML = "Sansa Stark";
+      chosen[9].classList.add("cardChosen");
     } else if (this == chosen[0] && state == 2) {
       choiceTwo.innerHTML = "Tyrion Lannister";
+      chosen[0].classList.add("cardChosen2");
     } else if (this == chosen[1] && state == 2) {
       choiceTwo.innerHTML = "Daenerys Targaryen";
+      chosen[1].classList.add("cardChosen2");
     } else if (this == chosen[2] && state == 2) {
       choiceTwo.innerHTML = "Jon Snow";
+      chosen[2].classList.add("cardChosen2");
     } else if (this == chosen[3] && state == 2) {
       choiceTwo.innerHTML = "Gilly";
+      chosen[3].classList.add("cardChosen2");
     } else if (this == chosen[4] && state == 2) {
       choiceTwo.innerHTML = "Shae";
+      chosen[4].classList.add("cardChosen2");
     } else if (this == chosen[5] && state == 2) {
       choiceTwo.innerHTML = "Robb Stark";
+      chosen[5].classList.add("cardChosen2");
     } else if (this == chosen[6] && state == 2) {
       choiceTwo.innerHTML = "Arya Stark";
+      chosen[6].classList.add("cardChosen2");
     } else if (this == chosen[7] && state == 2) {
       choiceTwo.innerHTML = "Bronn";
+      chosen[7].classList.add("cardChosen2");
     } else if (this == chosen[8] && state == 2) {
       choiceTwo.innerHTML = "Drogo";
+      chosen[8].classList.add("cardChosen2");
     } else if (this == chosen[9] && state == 2) {
       choiceTwo.innerHTML = "Sansa Stark";
+      chosen[9].classList.add("cardChosen2");
     }
 
     var playNow = document.querySelector(".playNow");
