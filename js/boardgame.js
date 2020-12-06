@@ -381,57 +381,67 @@ function nextP2(startPos, random) {
     activePlayer++;
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token);
+    diceContainer.style.display = "none";
 
     eventSquareFive.style.display = "block";
     function closeX() {
       eventSquareFive.style.display = "none";
       currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token);
+      diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
 
     activePlayer++;
   } else if (currentIndex2 === squareContent[10]) {
     currentIndex2.append(token);
+    diceContainer.style.display = "none";
 
     eventSquareEleven.style.display = "block";
     function closeX() {
       eventSquareEleven.style.display = "none";
       currentIndex2 = squareContent[10 + 3];
       currentIndex2.append(token);
+      diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[16]) {
     currentIndex2.append(token);
+    diceContainer.style.display = "none";
 
     eventSquareSeventeen.style.display = "block";
     function closeX() {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
       currentIndex2.append(token);
+      diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[20]) {
     currentIndex2.append(token);
+    diceContainer.style.display = "none";
 
     eventSquareTwenty.style.display = "block";
     function closeX() {
       eventSquareTwenty.style.display = "none";
       currentIndex2 = squareContent[20 - 5];
       currentIndex2.append(token);
+      diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
     activePlayer++;
   } else if (currentIndex2 === squareContent[23]) {
     currentIndex2.append(token);
+    diceContainer.style.display = "none";
 
     eventSquareTwentytwo.style.display = "block";
     function closeX() {
       eventSquareTwentytwo.style.display = "none";
       currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token);
+      diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
     activePlayer++;
