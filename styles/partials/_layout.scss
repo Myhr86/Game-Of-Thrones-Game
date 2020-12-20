@@ -1,3 +1,8 @@
+/* Colors
+Yellow: #f4d501
+Dark Cyan: #124449
+*/
+
 html {
   background: #1e1e1e;
 }
@@ -208,6 +213,10 @@ button#stateTwo {
   color: white;
 }
 
+button#stateOne:hover, button#stateTwo:hover {
+  opacity: 0.7;
+}
+
 .unactive {
   background: grey;
   color: white;
@@ -215,7 +224,7 @@ button#stateTwo {
 
 .active {
   font-weight: bold;
-
+  padding: 3px;
 }
 
 /* WIN PAGE */

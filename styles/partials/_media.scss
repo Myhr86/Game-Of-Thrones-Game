@@ -2,8 +2,48 @@
 
 }
 
+@media only screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+
+  .row {
+    max-width: 768px;
+    width: 100%;
+    align-self: center;
+    justify-content: center;
+  }
+
+  .col-sm-3 {
+    max-width: 60%;
+  }
+
+  .playNow {
+    margin-top: 5%;
+    margin-bottom: 120px;
+  }
+
+  #playButton {
+    left: 0;
+    width: 288px;
+    height: 70px;
+    margin-left: 5%;
+    top: 90px;
+    margin-bottom: 10px;
+  }
+}
 
 @media only screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
+
+  .row {
+    align-self: baseline;
+    justify-content: flex-start;
+    margin-left: 0;
+  }
+
   .navbar-header {
     max-width: 480px;
     width: 100%;
@@ -27,6 +67,8 @@
 
   .container h2 {
     margin: 0 auto;
+    font-size: 1.6em;
+    margin-bottom: 5%;
   }
 
   .row {
@@ -35,13 +77,15 @@
   }
 
   .playNow {
-    margin-top: 10px;
-    margin-bottom: 190px;
+    margin-top: 5%;
+    margin-bottom: 120px;
   }
 
   #playButton {
     left: 0;
-    width: 300px;
+    width: 288px;
+    height: 70px;
+    margin-left: 5%;
     top: 90px;
     margin-bottom: 10px;
   }

@@ -276,8 +276,8 @@
   }
 
   #animatedPokal {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     position: absolute;
     top: 25%;
   }
@@ -299,6 +299,51 @@
 }
 
 @media only screen and (max-width: 480px) {
+  body {
+    max-width: 480px;
+  }
 
+  .container {
+    max-width: 480px;
+  }
+
+  #animatedPokal {
+    width: 150px;
+    height: 150px;
+  }
+
+  .navbar-header {
+    max-width: 480px;
+  }
+
+  #logo2 {
+    margin-left: 33%;
+  }
+
+  .winH1 {
+    text-align: center;
+    font-size: 1.8em;
+  }
+
+  #congratAnim {
+    text-align: center;
+    font-size: 1.2em;
+  }
+
+  .contgratulations {
+    margin-left: 2.5%;
+    height: 300px;
+  }
+
+  .restartButton {
+    width: 100px;
+    height: 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  #border {
+    padding-bottom: 0;
+  }
 
 }
