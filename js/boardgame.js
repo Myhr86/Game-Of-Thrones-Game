@@ -211,7 +211,6 @@ function throwDice() {
           var currentIndex = squareContent[i];
 
         if(activePlayer %2 == 0) {
-
           if(startPos !== squareContent[0]) {
             nextP1(startPos, random);
           } else {

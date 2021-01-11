@@ -78,16 +78,16 @@ img {
 
 .characterCard {
   margin-top: 2%;
-  margin-bottom: 5%; }
+  margin-bottom: 2%; }
 
 .cardChosen {
   background: #124449;
-  opacity: 0.7;
+  opacity: 1;
   color: #fdfdfd; }
 
 .cardChosen2 {
   background: #112C57;
-  opacity: 0.7;
+  opacity: 1;
   color: #fdfdfd; }
 
 .card:hover {
@@ -138,6 +138,14 @@ div.alert h4 {
 
 .container {
   max-width: 1200px; }
+
+.container h2 {
+  padding-top: 3%; }
+
+#playerContainer {
+  background-image: url("../images/background340.jpg");
+  background-size: contain;
+  background-repeat: no-repeat; }
 
 .playNow {
   position: relative;
@@ -201,6 +209,7 @@ button#stateOne:hover, button#stateTwo:hover {
 
 #congratAnim {
   color: #fdfdfd;
+  text-align: center;
   font-family: 'Raleway', sans-serif; }
 
 h1.winH1 {
@@ -234,11 +243,20 @@ h1.winH1 {
   body {
     max-width: 768px; }
 
+  header {
+    margin-bottom: 5%; }
+
   .row {
     max-width: 768px;
     width: 100%;
     align-self: center;
     justify-content: center; }
+
+  .container h2 {
+    margin: 0 auto; }
+
+  div.container-fluid .container:first-of-type {
+    margin-left: 5%; }
 
   .col-sm-3 {
     max-width: 60%; }
@@ -246,6 +264,9 @@ h1.winH1 {
   .playNow {
     margin-top: 5%;
     margin-bottom: 120px; }
+
+  .playNow p {
+    margin-left: 5%; }
 
   #playButton {
     left: 0;
@@ -290,16 +311,19 @@ h1.winH1 {
     width: 100%; }
 
   .playNow {
-    margin-top: 5%;
     margin-bottom: 120px; }
+
+  .playNow p {
+    margin-bottom: 1%; }
 
   #playButton {
     left: 0;
     width: 288px;
-    height: 70px;
+    height: 50px;
     margin-left: 5%;
     top: 90px;
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    font-size: 1.6em; }
 
   .alert {
     width: 320px;

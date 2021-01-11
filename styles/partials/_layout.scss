@@ -96,24 +96,24 @@ img {
 
 .characterCard {
   margin-top: 2%;
-  margin-bottom: 5%;
+  margin-bottom: 2%;
 }
 
 .cardChosen {
   background: #124449;
-  opacity: 0.7;
+  opacity: 1;
   color: #fdfdfd;
 }
 
 .cardChosen2 {
-  background: #112C57;
-  opacity: 0.7;
+  background: #112345;
+  opacity: 1;
   color: #fdfdfd;
 }
 
 .card:hover {
   cursor: pointer;
-  background: #115736;
+  background: #11452F;
   opacity: 1;
   color: #fdfdfd;
   transition: 0.3s;
@@ -171,6 +171,16 @@ div.alert h4 {
   max-width: 1200px;
 }
 
+.container h2 {
+  padding-top: 3%;
+}
+
+#playerContainer {
+  background-image: url("../images/background340.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 .playNow {
   position: relative;
   color: #fdfdfd;
@@ -209,7 +219,7 @@ button#stateOne {
 
 button#stateTwo {
   border: none;
-  background: #112C57;
+  background: #112345;
   color: white;
 }
 
@@ -244,6 +254,7 @@ button#stateOne:hover, button#stateTwo:hover {
 
 #congratAnim {
   color: #fdfdfd;
+  text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 

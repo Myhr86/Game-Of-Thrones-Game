@@ -7,7 +7,7 @@ var i = 0;
 var speed = 50;
 
 var activePlayer = localStorage.getItem("activePlayer");
-console.log(activePlayer);
+
 if(activePlayer == 1) {
   var txt = "The winner is: " + p1;
   writeText();

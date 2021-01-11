@@ -86,6 +86,7 @@ fetch("characters.json")
 
   function chosenFunction(result2) {
     var state = localStorage.getItem('state');
+    localStorage.setItem('state', 1);
     var stateOne = document.getElementById("stateOne");
     var stateTwo = document.getElementById("stateTwo");
     //localStorage.setItem('state', 1);
@@ -93,16 +94,12 @@ fetch("characters.json")
       localStorage.setItem('state', 1);
       stateTwo.classList.remove("active");
       stateOne.classList.add("active");
-      /*stateTwo.classList.toggle("active");
-      stateOne.classList.toggle("active");*/
     }
-    stateTwo.onclick = function() {
-      state = 2;
+    stateTwo.onclick = function(){
+      //state = 2;
       localStorage.setItem('state', 2);
       stateOne.classList.remove("active");
       stateTwo.classList.add("active");
-      /*stateOne.classList.toggle("active");
-      stateTwo.classList.toggle("active");*/
     }
 
     /* Character Choice Functions */
@@ -115,7 +112,6 @@ fetch("characters.json")
         } else {
           chosen[i].classList.remove("cardChosen2");
         }
-
       }
 
     if (this == chosen[0] && state == 1) {
@@ -179,6 +175,13 @@ fetch("characters.json")
       choiceTwo.innerHTML = "Sansa Stark";
       chosen[9].classList.add("cardChosen2");
     }
+
+    if (state == 1) {
+      state == 2;
+    } else {
+      state == 1;
+    }
+
 
     var playNow = document.querySelector(".playNow");
     var playButton = document.getElementById("playButton");

@@ -7,11 +7,23 @@
     max-width: 768px;
   }
 
+  header {
+    margin-bottom: 5%;
+  }
+
   .row {
     max-width: 768px;
     width: 100%;
     align-self: center;
     justify-content: center;
+  }
+
+  .container h2 {
+    margin: 0 auto;
+  }
+
+  div.container-fluid .container:first-of-type {
+    margin-left: 5%;
   }
 
   .col-sm-3 {
@@ -21,6 +33,10 @@
   .playNow {
     margin-top: 5%;
     margin-bottom: 120px;
+  }
+
+  .playNow p {
+    margin-left: 5%;
   }
 
   #playButton {
@@ -77,17 +93,21 @@
   }
 
   .playNow {
-    margin-top: 5%;
     margin-bottom: 120px;
+  }
+
+  .playNow p {
+    margin-bottom: 1%;
   }
 
   #playButton {
     left: 0;
     width: 288px;
-    height: 70px;
+    height: 50px;
     margin-left: 5%;
     top: 90px;
     margin-bottom: 10px;
+    font-size: 1.6em;
   }
 
   .alert {
