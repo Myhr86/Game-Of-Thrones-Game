@@ -1,3 +1,5 @@
+localStorage.setItem('state', 1);
+
 fetch("characters.json")
   .then(result => result.json())
   .then((res) => {
@@ -86,7 +88,6 @@ fetch("characters.json")
 
   function chosenFunction(result2) {
     var state = localStorage.getItem('state');
-    localStorage.setItem('state', 1);
     var stateOne = document.getElementById("stateOne");
     var stateTwo = document.getElementById("stateTwo");
     //localStorage.setItem('state', 1);
@@ -176,13 +177,6 @@ fetch("characters.json")
       chosen[9].classList.add("cardChosen2");
     }
 
-    if (state == 1) {
-      state == 2;
-    } else {
-      state == 1;
-    }
-
-
     var playNow = document.querySelector(".playNow");
     var playButton = document.getElementById("playButton");
     var playLink = document.getElementById("playLink");
@@ -192,6 +186,8 @@ fetch("characters.json")
 
     //playLink.href = "";
     if(choiceOne.innerHTML !== "" && choiceTwo.innerHTML !== "") {
+      playButton.style.background = "green";
+      playButton.style.fontWeight = "bold";
       a.href = "boardgame.html";
       a.append(playButton);
       playNow.append(a);

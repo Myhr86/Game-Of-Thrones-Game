@@ -86,13 +86,13 @@ img {
   color: #fdfdfd; }
 
 .cardChosen2 {
-  background: #112C57;
+  background: #112345;
   opacity: 1;
   color: #fdfdfd; }
 
 .card:hover {
   cursor: pointer;
-  background: #115736;
+  background: #11452F;
   opacity: 1;
   color: #fdfdfd;
   transition: 0.3s; }
@@ -180,7 +180,7 @@ button#stateOne {
 
 button#stateTwo {
   border: none;
-  background: #112C57;
+  background: #112345;
   color: white; }
 
 button#stateOne:hover, button#stateTwo:hover {
