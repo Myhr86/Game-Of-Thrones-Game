@@ -177,6 +177,17 @@ fetch("characters.json")
       chosen[9].classList.add("cardChosen2");
     }
 
+    var infoX = document.getElementById("infoX");
+    var hintButton = document.getElementById("hintButton");
+    var choiceInfo = document.getElementById("choiceInfo");
+    hintButton.addEventListener("click", function() {
+      choiceInfo.style.display = "block";
+    });
+
+    infoX.addEventListener("click", function() {
+      choiceInfo.style.display ="none";
+    })
+
     var playNow = document.querySelector(".playNow");
     var playButton = document.getElementById("playButton");
     var playLink = document.getElementById("playLink");

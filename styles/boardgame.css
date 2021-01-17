@@ -122,6 +122,17 @@ div.alert h4 {
 #alertX:hover {
   cursor: pointer; }
 
+#infoX {
+  position: absolute;
+  right: 10px;
+  top: 2px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fdfdfd; }
+
+#infoX:hover {
+  cursor: pointer; }
+
 .characters {
   width: 50px;
   margin-left: 33%; }
@@ -176,14 +187,25 @@ div.alert h4 {
 button#stateOne {
   border: none;
   background: #124449;
-  color: white; }
+  color: white;
+  font-family: 'Raleway', sans-serif; }
 
 button#stateTwo {
   border: none;
   background: #112345;
-  color: white; }
+  color: white;
+  font-family: 'Raleway', sans-serif; }
 
 button#stateOne:hover, button#stateTwo:hover {
+  opacity: 0.7; }
+
+#hintButton {
+  border: none;
+  color: #1e1e1e;
+  background: #f4d501;
+  font-family: 'Raleway', sans-serif; }
+
+#hintButton:hover {
   opacity: 0.7; }
 
 .unactive {
@@ -193,6 +215,20 @@ button#stateOne:hover, button#stateTwo:hover {
 .active {
   font-weight: bold;
   padding: 3px; }
+
+#choiceInfo {
+  position: relative;
+  display: none;
+  background: #124449;
+  color: #fdfdfd;
+  padding: 2%;
+  padding-top: 1.5%;
+  width: 350px;
+  height: 150px;
+  position: absolute;
+  z-index: 200;
+  left: 40%;
+  top: 55%; }
 
 /* WIN PAGE */
 .contgratulations {
@@ -593,7 +629,7 @@ h1.winH1 {
     grid-template-rows: 80px; }
 
   .singleSquare {
-    border: 1px solid black;
+    border: 1px solid grey;
     grid-area: singleSquare; }
 
   .secondSingle {
