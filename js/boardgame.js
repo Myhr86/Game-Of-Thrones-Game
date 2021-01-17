@@ -161,12 +161,9 @@ function sound(src) {
 }
 
 mySound = new sound("/sounds/tick.mp3");
-/*var myMusic = new sound("/sounds/gametheme.mp3");
-myMusic.play();*/
 
 function throwDice() {
   setTimeout(function() {
-
 /* Pick a random number between 1 and 6 */
   var random = Math.floor((Math.random() * 6) + 1);
   dice.src = `/images/dice${random}.png`;
@@ -215,8 +212,14 @@ function throwDice() {
             nextP1(startPos, random);
           } else {
             squareContent[i + 1].append(token2);
-            activePlayer++;
-            setTimeout(function() { throwDice() }, 1000);
+            if (random !== 6) {
+              activePlayer++;
+              setTimeout(function() { throwDice() }, 1000);
+            } else {
+              diceContainer.style.display = "block";
+              currentPlayer.style.color = "#f4d501";
+              currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+            }
           }
 
 
@@ -266,8 +269,14 @@ function nextP1(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex.append(token2);
-    activePlayer++;
-    setTimeout(function() { throwDice() }, 1000);
+    if (random !== 6) {
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
+    } else {
+      diceContainer.style.display = "block";
+      currentPlayer.style.color = "#f4d501";
+      currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+    }
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token2);
     closeEvent.addEventListener("click", closeX);
@@ -277,8 +286,14 @@ function nextP1(startPos, random) {
       eventSquareFive.style.display = "none";
       currentIndex2 = squareContent[7 - 2];
       currentIndex2.append(token2);
-      activePlayer++;
-      setTimeout(function() { throwDice() }, 1000);
+      if (random !== 6) {
+        activePlayer++;
+        setTimeout(function() { throwDice() }, 1000);
+      } else {
+        diceContainer.style.display = "block";
+        currentPlayer.style.color = "#f4d501";
+        currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+      }
     }
 
   } else if (currentIndex2 === squareContent[10]) {
@@ -289,8 +304,14 @@ function nextP1(startPos, random) {
       eventSquareEleven.style.display = "none";
       currentIndex2 = squareContent[10 + 3];
       currentIndex2.append(token2);
-      activePlayer++;
-      setTimeout(function() { throwDice() }, 1000);
+      if (random !== 6) {
+        activePlayer++;
+        setTimeout(function() { throwDice() }, 1000);
+      } else {
+        diceContainer.style.display = "block";
+        currentPlayer.style.color = "#f4d501";
+        currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+      }
     }
 
   } else if (currentIndex2 === squareContent[16]) {
@@ -301,8 +322,14 @@ function nextP1(startPos, random) {
       eventSquareSeventeen.style.display = "none";
       currentIndex2 = squareContent[16 + 6];
       currentIndex2.append(token2);
-      activePlayer++;
-      setTimeout(function() { throwDice() }, 1000);
+      if (random !== 6) {
+        activePlayer++;
+        setTimeout(function() { throwDice() }, 1000);
+      } else {
+        diceContainer.style.display = "block";
+        currentPlayer.style.color = "#f4d501";
+        currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+      }
     }
 
   } else if (currentIndex2 === squareContent[20]) {
@@ -314,8 +341,14 @@ function nextP1(startPos, random) {
       eventSquareTwenty.style.display = "none";
       currentIndex2 = squareContent[20 - 5];
       currentIndex2.append(token2);
-      activePlayer++;
-      setTimeout(function() { throwDice() }, 1000);
+      if (random !== 6) {
+        activePlayer++;
+        setTimeout(function() { throwDice() }, 1000);
+      } else {
+        diceContainer.style.display = "block";
+        currentPlayer.style.color = "#f4d501";
+        currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+      }
     }
 
   } else if (currentIndex2 === squareContent[23]) {
@@ -327,8 +360,14 @@ function nextP1(startPos, random) {
       eventSquareTwentytwo.style.display = "none";
       currentIndex2 = squareContent[23 - 1];
       currentIndex2.append(token2);
-      activePlayer++;
-      setTimeout(function() { throwDice() }, 1000);
+      if (random !== 6) {
+        activePlayer++;
+        setTimeout(function() { throwDice() }, 1000);
+      } else {
+        diceContainer.style.display = "block";
+        currentPlayer.style.color = "#f4d501";
+        currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+      }
     }
 
   } else if (currentIndex2 === squareContent[29]){
@@ -336,8 +375,14 @@ function nextP1(startPos, random) {
     win(activePlayer);
   } else if (currentIndex2 !== squareContent[undefined]){
     currentIndex2.append(token2);
-    activePlayer++;
-    setTimeout(function() { throwDice() }, 1000);
+    if (random !== 6) {
+      activePlayer++;
+      setTimeout(function() { throwDice() }, 1000);
+    } else {
+      diceContainer.style.display = "block";
+      currentPlayer.style.color = "#f4d501";
+      currentPlayer.innerHTML = "Player One: You rolled 6! You may throw the dice again";
+    }
     //throwDice();
   }
 }
@@ -377,7 +422,13 @@ function nextP2(startPos, random) {
 
   if(currentIndex2 == squareContent[undefined]) {
     endIndex2.append(token);
-    activePlayer++;
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   } else if (currentIndex2 === squareContent[7]) {
     currentIndex2.append(token);
     diceContainer.style.display = "none";
@@ -390,8 +441,14 @@ function nextP2(startPos, random) {
       diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
 
-    activePlayer++;
   } else if (currentIndex2 === squareContent[10]) {
     currentIndex2.append(token);
     diceContainer.style.display = "none";
@@ -404,7 +461,13 @@ function nextP2(startPos, random) {
       diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
-    activePlayer++;
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   } else if (currentIndex2 === squareContent[16]) {
     currentIndex2.append(token);
     diceContainer.style.display = "none";
@@ -417,7 +480,13 @@ function nextP2(startPos, random) {
       diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
-    activePlayer++;
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   } else if (currentIndex2 === squareContent[20]) {
     currentIndex2.append(token);
     diceContainer.style.display = "none";
@@ -430,7 +499,13 @@ function nextP2(startPos, random) {
       diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
-    activePlayer++;
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   } else if (currentIndex2 === squareContent[23]) {
     currentIndex2.append(token);
     diceContainer.style.display = "none";
@@ -443,13 +518,26 @@ function nextP2(startPos, random) {
       diceContainer.style.display = "block";
     }
     setTimeout(closeX, 2000);
-    activePlayer++;
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   } else if (currentIndex2 === squareContent[29]){
     currentIndex2.append(token);
     win(activePlayer);
   } else if (currentIndex2 !== squareContent[undefined]){
     currentIndex2.append(token);
-    activePlayer++;
+    setTimeout(closeX, 2000);
+    if (random !== 6) {
+      activePlayer++;
+    } else {
+      currentPlayer.style.color = "#8e98a0";
+      currentPlayer.innerHTML = "Computer: You rolled 6! You may throw the dice again";
+      setTimeout(function() { throwDice() }, 1000);
+    }
   }
 }
 

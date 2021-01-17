@@ -13,6 +13,11 @@ body {
 
 h1,h2,h3,h4,h5 {
   font-family: 'Playfair Display', serif;
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
 }
 
 h1 {
@@ -190,7 +195,7 @@ div.alert h4 {
 
 #playerContainer {
   background-image: url("../images/background340.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -294,12 +299,14 @@ button#stateOne:hover, button#stateTwo:hover {
 }
 
 #congratAnim {
+  font-size: 24px;
   color: #fdfdfd;
   text-align: center;
   font-family: 'Raleway', sans-serif;
 }
 
-h1.winH1 {
+h2.winH2 {
+  padding-top: 1%;
   text-align: center;
   color: #f4d501;
 }

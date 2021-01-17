@@ -12,7 +12,11 @@ body {
   background: #1e1e1e; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Playfair Display', serif; }
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; }
+
+p {
+  font-size: 16px; }
 
 h1 {
   color: white; }
@@ -155,7 +159,7 @@ div.alert h4 {
 
 #playerContainer {
   background-image: url("../images/background340.jpg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat; }
 
 .playNow {
@@ -244,11 +248,13 @@ button#stateOne:hover, button#stateTwo:hover {
   top: 25%; }
 
 #congratAnim {
+  font-size: 24px;
   color: #fdfdfd;
   text-align: center;
   font-family: 'Raleway', sans-serif; }
 
-h1.winH1 {
+h2.winH2 {
+  padding-top: 1%;
   text-align: center;
   color: #f4d501; }
 
@@ -310,7 +316,16 @@ h1.winH1 {
     height: 70px;
     margin-left: 5%;
     top: 90px;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+
+  #choiceInfo {
+    left: 25%; }
+
+  #choiceInfo p {
+    margin-top: 10%; }
+
+  .alert {
+    left: 25%; } }
 @media only screen and (max-width: 480px) {
   body {
     max-width: 480px; }
@@ -361,8 +376,15 @@ h1.winH1 {
     margin-bottom: 10px;
     font-size: 1.6em; }
 
+  #choiceInfo {
+    left: 3.5%;
+    top: 55%; }
+
   .alert {
     width: 320px;
-    left: 5%; } }
+    left: 7%; }
+
+  div.alert h4 {
+    text-align: center; } }
 
 /*# sourceMappingURL=style.css.map */

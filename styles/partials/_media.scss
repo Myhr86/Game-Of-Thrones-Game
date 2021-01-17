@@ -47,6 +47,18 @@
     top: 90px;
     margin-bottom: 10px;
   }
+
+  #choiceInfo {
+    left: 25%;
+  }
+
+  #choiceInfo p {
+    margin-top: 10%;
+  }
+
+  .alert {
+    left: 25%;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -110,9 +122,18 @@
     font-size: 1.6em;
   }
 
+  #choiceInfo {
+    left: 3.5%;
+    top: 55%;
+  }
+
   .alert {
     width: 320px;
-    left: 5%;
+    left: 7%;
+  }
+
+  div.alert h4 {
+    text-align: center;
   }
 
 }

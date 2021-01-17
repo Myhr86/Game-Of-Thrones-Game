@@ -25,11 +25,12 @@ function writeText() {
 }
 
 pokalMove();
-
 function pokalMove() {
   var pokal = document.getElementById("animatedPokal");
   var container = document.querySelector(".contgratulations");
-  console.log(container);
+  var centerPokal = Math.round(container.offsetWidth / 3);
+  console.log(centerPokal);
+
   var pos = 0;
   //var id = setInterval(frame, 10);
   if (animatedPokal.width >= 151) {
@@ -39,7 +40,7 @@ function pokalMove() {
   }
 
   function frame() {
-    if (pos == 350) {
+    if (pos == centerPokal) {
       clearInterval(id);
     } else {
       pos++;
@@ -48,7 +49,7 @@ function pokalMove() {
   }
 
   function frameSmall() {
-    if (pos == 100) {
+    if (pos == centerPokal) {
       clearInterval(id);
     } else {
       pos++;

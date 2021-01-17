@@ -244,11 +244,13 @@ button#stateOne:hover, button#stateTwo:hover {
   top: 25%; }
 
 #congratAnim {
+  font-size: 24px;
   color: #fdfdfd;
   text-align: center;
   font-family: 'Raleway', sans-serif; }
 
-h1.winH1 {
+h2.winH2 {
+  padding-top: 1%;
   text-align: center;
   color: #f4d501; }
 
@@ -688,6 +690,7 @@ h1.winH1 {
   #currentPlayer {
     margin-bottom: 0;
     padding-bottom: 0;
+    padding-top: 0;
     color: #f4d501; }
 
   .start {
