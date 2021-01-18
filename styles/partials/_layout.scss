@@ -258,6 +258,15 @@ button#stateOne:hover, button#stateTwo:hover {
   opacity: 0.7;
 }
 
+i {
+  font-size: 15px;
+}
+
+.fa.fa-user {
+  font-size: 40px;
+  position: absolute;
+}
+
 .unactive {
   background: grey;
   color: white;
