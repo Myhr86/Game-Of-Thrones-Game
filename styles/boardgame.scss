@@ -2,7 +2,7 @@
 @import "partials/layout";
 @import "partials/boardgameMedia";
 
-@media screen and (min-width: 981px) {
+
 .board {
   margin-left: 20%;
   margin-top: 0;
@@ -28,6 +28,7 @@
   background-image: url("/../images/background2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
 }
 
 .oneToFive {
@@ -107,7 +108,7 @@
   height: 100px;
   position: absolute;
   top: 300px;
-  left: 100px;
+  left: 70px;
   border: none;
   text-align: center;
   font-size: 36px;
@@ -128,7 +129,7 @@
   height: 100px;
   position: absolute;
   top: 300px;
-  left: 200px;
+  left: 170px;
   border: none;
   text-align: center;
   font-size: 36px;
@@ -147,7 +148,7 @@
 #players {
   position: absolute;
   top: 200px;
-  left: 100px;
+  left: 70px;
 }
 
 .playerBanner {
@@ -211,8 +212,10 @@
   margin-left: 2%;
 }
 
-.eventSquare h4 {
+.eventSquare h3 {
   margin-left: 2%;
+  padding-top: 1%;
+  color: #f4d501;
 }
 
 .eventSquareFive {
@@ -302,5 +305,4 @@
 .event22 {
   background-image: url("../images/hide.jpg");
   background-size: cover;
-}
 }

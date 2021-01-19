@@ -1,5 +1,17 @@
 @media only screen and (max-width: 1200px) {
+  #playerContainer {
+    max-width: 1200px;
+    width: 100%;
+  }
 
+  .row {
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .card {
+    width: 14rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -8,7 +20,11 @@
   }
 
   header {
-    margin-bottom: 5%;
+    margin-bottom: 0;
+  }
+
+  #playerContainer {
+    max-width: 768px;
   }
 
   .row {
@@ -16,6 +32,10 @@
     width: 100%;
     align-self: center;
     justify-content: center;
+  }
+
+  .card {
+    width: 18rem;
   }
 
   .container h2 {
@@ -66,10 +86,18 @@
     max-width: 480px;
   }
 
+  #playerContainer {
+    max-width: 480px;
+  }
+
   .row {
     align-self: baseline;
     justify-content: flex-start;
     margin-left: 0;
+  }
+
+  header {
+    margin-bottom: 0;
   }
 
   .navbar-header {
@@ -82,10 +110,11 @@
   #logo {
     width: 100%;
     margin-left: 0;
+    margin-top: 15%;
   }
 
   #logo2 {
-    margin: 0 auto;
+    margin-left: 33%;
     margin-top: 5%;
   }
 

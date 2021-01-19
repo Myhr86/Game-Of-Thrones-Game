@@ -12,28 +12,34 @@ body {
   background: #1e1e1e; }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px; }
+  font-family: 'Playfair Display', serif; }
 
 p {
   font-size: 16px; }
 
 h1 {
-  color: white; }
-
-h2 {
+  font-size: 32px;
   color: #f4d501;
+  padding-top: 3%;
   font-family: 'Playfair Display', serif; }
 
-h4 {
-  color: #fdfdfd; }
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; }
 
-h5 {
+#diceContainer h2 {
+  margin-top: 20%; }
+
+h3 {
+  color: #fdfdfd;
+  font-size: 20px; }
+
+h4 {
   position: absolute;
-  top: 30%;
-  left: 15%;
-  z-index: 0;
-  color: #fdfdfd; }
+  top: 34%;
+  left: 22%;
+  color: #fdfdfd;
+  font-size: 18px; }
 
 p {
   font-family: 'Raleway', sans-serif; }
@@ -73,6 +79,7 @@ img {
 
 .card {
   color: #1e1e1e;
+  background: #fdfdfd;
   width: 18rem;
   position: relative;
   height: 300px; }
@@ -153,9 +160,6 @@ div.alert h4 {
 
 .container {
   max-width: 1200px; }
-
-.container h2 {
-  padding-top: 3%; }
 
 #playerContainer {
   background-image: url("../images/background340.jpg");
@@ -260,7 +264,7 @@ i {
   text-align: center;
   font-family: 'Raleway', sans-serif; }
 
-h2.winH2 {
+h1.winH1 {
   padding-top: 1%;
   text-align: center;
   color: #f4d501; }
@@ -288,18 +292,35 @@ h2.winH2 {
   background: #1e1e1e;
   color: #fdfdfd; }
 
+@media only screen and (max-width: 1200px) {
+  #playerContainer {
+    max-width: 1200px;
+    width: 100%; }
+
+  .row {
+    max-width: 1200px;
+    width: 100%; }
+
+  .card {
+    width: 14rem; } }
 @media only screen and (max-width: 768px) {
   body {
     max-width: 768px; }
 
   header {
-    margin-bottom: 5%; }
+    margin-bottom: 0; }
+
+  #playerContainer {
+    max-width: 768px; }
 
   .row {
     max-width: 768px;
     width: 100%;
     align-self: center;
     justify-content: center; }
+
+  .card {
+    width: 18rem; }
 
   .container h2 {
     margin: 0 auto; }
@@ -337,10 +358,16 @@ h2.winH2 {
   body {
     max-width: 480px; }
 
+  #playerContainer {
+    max-width: 480px; }
+
   .row {
     align-self: baseline;
     justify-content: flex-start;
     margin-left: 0; }
+
+  header {
+    margin-bottom: 0; }
 
   .navbar-header {
     max-width: 480px;
@@ -350,10 +377,11 @@ h2.winH2 {
 
   #logo {
     width: 100%;
-    margin-left: 0; }
+    margin-left: 0;
+    margin-top: 15%; }
 
   #logo2 {
-    margin: 0 auto;
+    margin-left: 33%;
     margin-top: 5%; }
 
   .container {

@@ -11,6 +11,7 @@ function thronesInfo(result) {
   var cardBody = document.getElementsByClassName("card");
   var characterArray = [result[1051], result[1302], result[582], result[1426], result[1934], result[1876], result[147], result[216], result[1345], result[956]];
   var srcArray = ["tyrion.svg", "daenerys.svg", "jon.svg", "gilly.svg", "shae.svg", "robb.svg", "arya.svg", "bronn.svg", "khal.svg", "sansa.svg"]
+  var names = ["Token of Tyrion", "Token of Daenerys", "Token of Jon", "Token of Gilly", "Token of Shae", "Token of Robb", "Token of Arya", "Token of Bronn", "Token of Khal", "Token of Sansa"]
   var imgClasses = ["first", "second","third","fourth", "fifth", "sixt","sevent", "eighth", "nineth", "tenth"];
   for (var i = 0; i < imgClasses.length; i++) {
   }
@@ -24,7 +25,7 @@ function thronesInfo(result) {
       var imageBox = document.createElement("div");
       var img = document.createElement("img");
       var img2 = document.createElement("img");
-      var h3 = document.createElement("h3");
+      var h2 = document.createElement("h2");
       var spanTitle = document.createElement("span");
       var spanGender = document.createElement("span");
       var p = document.createElement("p");
@@ -46,22 +47,23 @@ function thronesInfo(result) {
       }
       genderP.style.fontWeight = "bold";
       spanTitle.style.fontWeight = "bold";
+      img.alt = names[i];
       img.src = imgSource + srcArray[i];
       img.classList.add("characters");
       img.classList.add(imgClasses[i]);
       div.classList.add("card-body");
-      h3.classList.add("card-title");
-      h3.classList.add("card-font");
+      h2.classList.add("card-title");
+      h2.classList.add("card-font");
       imageBox.classList.add("imageBox");
 
       spanTitle.append(spanTitleText);
       p.append(spanTitle);
       p.append(pTitleText);
 
-      h3.append(characterArray[i].Name);
+      h2.append(characterArray[i].Name);
       imageBox.append(img);
       div.append(imageBox);
-      div.append(h3);
+      div.append(h2);
       div.append(hr);
       div.append(genderP);
       div.append(p);

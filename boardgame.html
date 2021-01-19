@@ -8,25 +8,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/boardgame.css">
-    <title>Game Of Thrones</title>
+    <title>Winter Is Coming | Board Game</title>
+    <meta name="description" content="Winter Is Coming is a new and exciting board game based on the Game of Thrones series">
   </head>
   <body>
     <header>
       <nav class="navbar navbar-mobile">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a href="index.html"><img id="logo2" src="/images/logo2.svg" alt=""></a>
-            <h1><img id="logo" src="/images/logo.svg" alt=""> </h1>
+            <a href="index.html"><img id="logo2" src="/images/logo2.svg" alt="Logo"></a>
+            <img id="logo" src="/images/logo.svg" alt="Logo Name">
           </div>
         </div>
       </nav>
     </header>
     <div class="container-fluid background2 main">
       <div class="container board playerBanner">
-        <h2 id="currentPlayer"></h2>
+        <h1 id="currentPlayer"></h1>
       </div>
       <div id="diceContainer" onclick="throwDice()">
-        <h3>Throw Dice</h3>
+        <h2>Throw Dice</h2>
       </div>
       <div id="diceDisplay">
 
@@ -37,44 +38,44 @@
       </div>
       <div class="container board background">
         <div class="eventSquare eventSquareFive">
-          <h4>DRAGON ON THE LOOSE!!</h4>
+          <h3>DRAGON ON THE LOOSE!!</h3>
           <p>A mad dragon is blocking your path. Move back two squares</p>
           <span class="closeEvent">X</span>
-          <img id="dragonEvent" src="images/dragon.jpg" alt="">
+          <img id="dragonEvent" src="images/dragon.jpg" alt="Dragon with flames">
         </div>
         <div class="eventSquare eventSquareEleven">
-          <h4>YOU HAVE FOUND A SWORD!</h4>
+          <h3>YOU HAVE FOUND A SWORD!</h3>
           <p>You have struck luck and found a Valyrian Steel sword pinned to the ground.
           You wield the sword and are able to slay through the enemies quickly.
           Move forward three squares.</p>
           <span class="closeEvent closeEventEleven">X</span>
-          <img id="dragonEvent" src="images/sword.jpg" alt="">
+          <img id="dragonEvent" src="images/sword.jpg" alt="Sword standing in ground">
         </div>
         <div class="eventSquare eventSquareSeventeen">
-          <h4>YOU STUMBLED UPON A HIDDEN BRIDGE!</h4>
+          <h3>YOU STUMBLED UPON A HIDDEN BRIDGE!</h3>
           <p>While walking along the path you discover some sticks and bushes that seems like they have been
             placed there by people. You clear it all away and discover a bridge that takes you across the gorge.
             Move ahead six squares.</p>
           <span class="closeEvent closeEventSeventeen">X</span>
-          <img id="dragonEvent" src="images/bridge.jpg" alt="">
+          <img id="dragonEvent" src="images/bridge.jpg" alt="Bridge to a castle">
         </div>
         <div class="eventSquare eventSquareTwenty">
-          <h4>YOU FELL ON A ROCK!</h4>
+          <h3>YOU FELL ON A ROCK!</h3>
           <p>You stumbled on a branch on the trail and injured your knee. You need to set up camp and rest.
           Go back five squares.</p>
           <span class="closeEvent closeEventTwenty">X</span>
-          <img id="dragonEvent" src="images/trail.jpg" alt="">
+          <img id="dragonEvent" src="images/trail.jpg" alt="A forrest trail">
         </div>
         <div class="eventSquare eventSquareTwentytwo">
-          <h4>YOU NEED TO HIDE!</h4>
+          <h3>YOU NEED TO HIDE!</h3>
           <p>You can hear a horde of enemies on horseback coming your way. You find a hiding spot in the forest and wait it out.
           Move back one square.</p>
           <span class="closeEvent closeEventTwentytwo">X</span>
-          <img id="dragonEvent" src="images/hide.jpg" alt="">
+          <img id="dragonEvent" src="images/hide.jpg" alt="Medieval man striking with a sword">
         </div>
         <div class="oneToFive">
           <div data-cell="0" class="square 1 start">
-            <h5>START</h5>
+            <h4>START</h4>
           </div>
           <div data-cell="1" class="square 2"></div>
           <div data-cell="2" class="square 3"></div>
@@ -115,7 +116,7 @@
         </div>
         <div class="firstSingle">
           <div data-cell="29" class="square 29 singleSquare finish">
-            <h5>FINISH</h5>
+            <h4>FINISH</h4>
           </div>
         </div>
 
