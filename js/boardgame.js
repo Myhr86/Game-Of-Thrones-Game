@@ -41,105 +41,105 @@ switch(playerTwo) {
     square[0].append(img);
     break;
   case "Daenerys Targaryen":
-    img.src = "/images/characters/daenerys.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/daenerys.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
   case "Jon Snow":
-    img.src = "/images/characters/jon.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/jon.svg";
     img.classList.add("token");
     img.classList.add("jon");
     square[0].append(img);
     break;
   case "Gilly":
-    img.src = "/images/characters/gilly.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/gilly.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
   case "Shae":
-    img.src = "/images/characters/shae.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/shae.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
   case "Robb Stark":
-    img.src = "/images/characters/robb.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/robb.svg";
     img.classList.add("token");
     img.classList.add("robb");
     square[0].append(img);
     break;
   case "Arya Stark":
-    img.src = "/images/characters/arya.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/arya.svg";
     img.classList.add("token");
     img.classList.add("arya");
     square[0].append(img);
     break;
   case "Bronn":
-    img.src = "/images/characters/bronn.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/bronn.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
   case "Drogo":
-    img.src = "/images/characters/khal.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/khal.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
   case "Sansa Stark":
-    img.src = "/images/characters/sansa.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/sansa.svg";
     img.classList.add("token");
     square[0].append(img);
 }
 
 switch(playerOne) {
   case "Tyrion Lannister":
-    img2.src = "/images/characters/tyrion.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/tyrion.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Daenerys Targaryen":
-    img2.src = "/images/characters/daenerys.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/daenerys.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Jon Snow":
-    img2.src = "/images/characters/jon.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/jon.svg";
     img2.classList.add("token2");
     img2.classList.add("jon");
     square[0].append(img2);
     break;
   case "Gilly":
-    img2.src = "/images/characters/gilly.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/gilly.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Shae":
-    img2.src = "/images/characters/shae.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/shae.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Robb Stark":
-    img2.src = "/images/characters/robb.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/robb.svg";
     img2.classList.add("token2");
     img2.classList.add("robb");
     square[0].append(img2);
     break;
   case "Arya Stark":
-    img2.src = "/images/characters/arya.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/arya.svg";
     img2.classList.add("token2");
     img2.classList.add("arya");
     square[0].append(img2);
     break;
   case "Bronn":
-    img2.src = "/images/characters/bronn.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/bronn.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Drogo":
-    img2.src = "/images/characters/khal.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/khal.svg";
     img2.classList.add("token2");
     square[0].append(img2);
     break;
   case "Sansa Stark":
-    img2.src = "/images/characters/sansa.svg";
+    img2.src = "/Game-Of-Thrones-Game/images/characters/sansa.svg";
     img2.classList.add("token2");
     square[0].append(img2);
 }
@@ -160,13 +160,13 @@ function sound(src) {
   }
 }
 
-mySound = new sound("/sounds/tick.mp3");
+mySound = new sound("/Game-Of-Thrones-Game/sounds/tick.mp3");
 
 function throwDice() {
   setTimeout(function() {
 /* Pick a random number between 1 and 6 */
   var random = Math.floor((Math.random() * 6) + 1);
-  dice.src = `/images/dice${random}.png`;
+  dice.src = `/Game-Of-Thrones-Game/images/dice${random}.png`;
 
   diceDisplay.append(dice);
   mySound.play();
