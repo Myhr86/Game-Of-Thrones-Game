@@ -79,15 +79,50 @@
   .alert {
     left: 25%;
   }
+
+  .container {
+    max-width: 768px;
+    width: 97%;
+    margin-right: 0;
+    margin-left: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    width: 100%;
+  }
+  #playerContainer {
+    max-width: 720px;
+    width: 100%;
+  }
+
+  #logo {
+    width: 400px;
+    margin-top: 6%;
+    margin-left: 45px;
+  }
+
+  .container {
+    max-width: 720px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
   body {
     max-width: 480px;
+    width: 100%;
+  }
+
+  .container {
+    max-width: 480px;
   }
 
   #playerContainer {
     max-width: 480px;
+    width: 100%;
   }
 
   .row {
