@@ -36,7 +36,7 @@ var closeEventTwentytwo = document.querySelector(".closeEventTwentytwo");
 /* TOKEN GIVEN BASED ON CHOICE FROM CHARACTER SELECT ON PREVIOUS PAGE */
 switch(playerTwo) {
   case "Tyrion Lannister":
-    img.src = "/images/characters/tyrion.svg";
+    img.src = "/Game-Of-Thrones-Game/images/characters/tyrion.svg";
     img.classList.add("token");
     square[0].append(img);
     break;
